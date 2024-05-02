@@ -13,7 +13,7 @@ const config: QuartzConfig = {
     enablePopovers: true,
     analytics: null,
     locale: "pt-BR",
-    baseUrl: "jardim.tiffs.dev",
+    baseUrl: "tiffanyrossi.github.io/jardim-digital/",
     ignorePatterns: ["_journal", "_personal", "_templates", ".obsidian"],
     defaultDateType: "created",
     theme: {
