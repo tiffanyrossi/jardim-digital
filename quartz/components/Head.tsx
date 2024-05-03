@@ -20,7 +20,7 @@ export default (() => {
 
     return (
       <head>
-        <title>{title}</title>
+        <title>{title} | wiki.tiffs.dev 🧠</title>
         <meta charSet="utf-8" />
         {cfg.theme.cdnCaching && cfg.theme.fontOrigin === "googleFonts" && (
           <>
