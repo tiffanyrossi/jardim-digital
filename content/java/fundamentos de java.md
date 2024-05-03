@@ -6,7 +6,8 @@ tags:
   - java
 "description:":
 ---
->"java é uma linguagem de programação de propósito geral, concorrente, baseada em classes e orientada a objetos. projetada para ser simples o bastante para que a maioria dos programadores se torne fluente na linguagem">
+>"java é uma linguagem de programação de propósito geral, concorrente, baseada em classes e orientada a objetos. projetada para ser simples o bastante para que a maioria dos programadores se torne fluente na linguagem"
+>
 >— [[java: guia do programador]], Peter Jandl Junior
 
 ----

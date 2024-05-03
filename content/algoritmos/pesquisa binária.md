@@ -16,7 +16,7 @@ já na pesquisa binária, é possível chutar um número intermediário e descob
 
 para uma lista de $n$ números, a pesquisa binária precisa de no máximo $log_2n$ tentativas para retornar o valor correto, enquanto a pesquisa simples precisa de até $n$ etapas. para entender melhor: [[logaritmos]]. 
 
-> [!NOTE]
+> [!info]
 > a pesquisa binária só funciona quando a lista está ordenada.
 
 ## implementação
