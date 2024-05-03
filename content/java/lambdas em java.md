@@ -3,9 +3,6 @@
 "alias:": 
 "draft:": "false"
 tags:
-  - "#semente"
+  - java
 "description:":
 ---
->[!todo] to-do
-> - popular essa página
-

@@ -11,6 +11,11 @@ tags:
 > 
 > — **maggie appleton**, [A Brief History & Ethos of the Digital Garden](https://maggieappleton.com/garden-history)
 
+>[!todo] to-do
+>- linha do tempo dos jardins digitais
+>- traduzir o trecho abaixo
+>- diretivas dos jardins digitais
+>- por que ter um jardim digital
 
 > Caufield makes clear digital gardening is not about specific tools – it's not a Wordpress plugin, Gastby theme, or Jekyll template. It's a **different way of thinking about our online behaviour around information** - one that accumulates personal knowledge over time in an explorable space.
 > 

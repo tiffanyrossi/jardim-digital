@@ -2,10 +2,6 @@
 "title:": 
 "alias:": 
 "draft:": "false"
-tags:
-  - "#semente"
+tags: 
 "description:":
 ---
->[!todo] to-do
-> - popular essa página
-
