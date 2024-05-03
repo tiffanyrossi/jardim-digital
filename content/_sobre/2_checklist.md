@@ -6,7 +6,7 @@ tags:
 "description:":
 ---
 >[!info] 
->páginas que reúne pendências no meu jardim digital - páginas que preciso dar uma atenção maior, melhorias para implementar, ideias novas...
+>pendências no meu jardim digital - páginas que preciso dar uma atenção maior, melhorias para implementar, ideias novas...
 ## páginas para completar
 - [ ] [[desenho de perspectiva]]
 - [ ] [[indieweb]]
