@@ -19,3 +19,4 @@ tags:
 - [ ] mapa de conteúdos
 - [ ] página com o que estou consumindo/produzindo no momento
 - [ ] guidelines e fluxos para orientar a organização e desenvolvimento dos conteúdos
+- [ ] links no footer
