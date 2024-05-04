@@ -18,6 +18,12 @@ nada é definitivo e não há problema em se corrigir, procurar fontes controver
 >[!todo]
 >popular essa área :)
 
+### tags
+#semente
+
+#comofazer
+
+
 ---------------------
 ## ferramentas
 - [obsidian](https://obsidian.md/): onde centralizo todo meu conhecimento. é uma ferramenta poderosa que processa arquivos markdown e organiza notas por meio de links entre páginas, gráficos de conexões e plugins que trazem ainda mais funcionalidades. 
