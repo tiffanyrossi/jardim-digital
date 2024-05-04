@@ -21,7 +21,7 @@ const config: QuartzConfig = {
       cdnCaching: true,
       typography: {
         header: "Georgia",
-        body: "verdana",
+        body: "Tahoma",
         code: "Fira Code",
       },
       colors: {
