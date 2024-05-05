@@ -1,3 +1,11 @@
+---
+"title:": 
+"alias:": 
+"draft:": "false"
+tags:
+  - árvore
+"description:":
+---
 o meu **pkm** (*[personal knowledge management](https://en.wikipedia.org/wiki/Personal_knowledge_management)*) estrutura o meu fluxo de ideias e aprendizados - como receber, processar, organizar e guardar uma informação. esse sistema é vivo e evolui conforme minhas necessidades e novos aprendizados sobre o tema. 
 
 um pkm resolve um combo frustrante de problemas: pilhas de anotações de cursos que só fazem sentido na hora que são escritas, esquecer como um problema é resolvido, não lembrar onde guardou alguma informação importante, reescrever linhas e linhas de código sem necessidade... ter um sistema bem definido libera espaço de processamento mental, reduzindo o stress e me permitindo focar na informação
