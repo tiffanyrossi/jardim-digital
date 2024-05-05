@@ -23,16 +23,19 @@ nada é definitivo e não há problema em se corrigir, procurar fontes controver
 
 ---------------
 ## o fluxo da informação
-### 🌿matinho
-uma nota surge como um #matinho. crio uma página vazia com um conteúdo que gostaria de trazer por aqui, mas ainda não tenho nada anotado. funciona como um lembrete de um tema que sei que preciso escrever sobre.
 ### 🌱semente 
 anotações soltas, pensamentos e ideias. uma #semente pode ser feita de notas de um workshop, uma ideia que tive enquanto estava fazendo outra coisa, um trecho de algo que li e quero pesquisar mais... uma semente é plantada e depois deve ser cultivada.
-### 🪴plantinha
-uma semente, depois de cultivada, vai tomando forma. começo a aprofundar a pesquisa, trago uma fonte nova, escrevo meu ponto de vista sobre. a #plantinha é uma fase intermediária onde o que é escrito começa a madurecer.
+### 🪴planta
+uma semente, depois de cultivada, vai tomando forma. começo a aprofundar a pesquisa, trago uma fonte nova, escrevo meu ponto de vista sobre. a #planta é uma fase intermediária onde o que é escrito começa a madurecer.
 ### 🌳árvore
 uma #árvore é o mais próximo de permanente que uma nota pode chegar (pensando que nada é exatamente permanente e poder ser revisado sempre que necessário). uma nota que amadureceu, foi alimentada com fontes, pesquisada e reescrita até que eu esteja satisfeita com a forma como ela aborda um assunto.
-### 🍎fruto
+### outros
+#### 🌿matinho
+uma nota vazia é um #matinho, criada para um conteúdo que gostaria de trazer para cá, mas ainda não tenho nada anotado. funciona como um lembrete de um tema que sei que preciso escrever sobre.
+#### 🍎fruto
 nem toda árvore precisa dar frutos, mas caso um assunto renda um post de blog, um projeto ou algo do tipo, esse #fruto deve ser linkado à árvore que o originou.
+#### 🐝 pólen
+livros, textos, artigos lidos que podem polinizar meu jardim, enriquecendo meus conhecimentos e anotações. #pólen são notas sobre um conteúdo específico, não fazem parte do fluxo diretamente.
 
 ---------------------
 ## ferramentas
