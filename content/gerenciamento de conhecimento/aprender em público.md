@@ -4,6 +4,7 @@
 "draft:": "false"
 tags:
   - leituras
+  - "#plantinha"
 "description:":
 ---
 aprender em público é  a forma mais rápida de se aprender algo. a ideia central do método é **criar conteúdo** enquanto se aprende, em vez de apenas *consumir conteúdo*. aprender de forma privada leva à procrastinação.

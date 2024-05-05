@@ -12,4 +12,8 @@ olá! eu sou [[1_sobre mim|Tiffany Rossi]] e este é um espaço público onde co
 
 me baseio no método [[zettelkasten]] para construir meu [[jardim digital]] - ou segundo cérebro, wiki pessoal etc. tudo aqui nasce como uma **semente** - por isso, muitas notas estão incompletas, bagunçadas ou ainda não fazem sentido. dia a dia, cultivo meu jardim, fazendo minha base de conhecimento crescer.
 
-navegue pelos conteúdos à esquerda, explore as notas e seus links. os gráficos ao lado de cada nota permitem visualizar relações entre temas e outras notas. também há uma barra de busca ao lado, caso queira procurar por temas específicos.
+----
+
+|     |     |
+| --- | --- |
+|     |     |

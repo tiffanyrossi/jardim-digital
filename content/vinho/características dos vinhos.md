@@ -4,6 +4,7 @@
 "draft:": "false"
 tags:
   - vinho
+  - "#semente"
 "description:":
 ---
 >[!todo] to-do

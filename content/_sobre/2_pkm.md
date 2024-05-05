@@ -1,6 +1,6 @@
-o meu **pkm** (*[personal knowledge management](https://en.wikipedia.org/wiki/Personal_knowledge_management)*) estrutura o meu fluxo de ideias e aprendizados - como receber, processar, organizar e guardar uma informação. 
+o meu **pkm** (*[personal knowledge management](https://en.wikipedia.org/wiki/Personal_knowledge_management)*) estrutura o meu fluxo de ideias e aprendizados - como receber, processar, organizar e guardar uma informação. esse sistema é vivo e evolui conforme minhas necessidades e novos aprendizados sobre o tema. 
 
-um pkm resolve um combo frustrante de problemas: pilhas de anotações de cursos que só fazem sentido na hora que são escritas, esquecer como um problema é resolvido, não lembrar onde guardou alguma informação importante, reescrever linhas e linhas de código sem necessidade... ter um sistema bem definido libera espaço de processamento mental, reduzindo o stress e me permitindo focar na informação.
+um pkm resolve um combo frustrante de problemas: pilhas de anotações de cursos que só fazem sentido na hora que são escritas, esquecer como um problema é resolvido, não lembrar onde guardou alguma informação importante, reescrever linhas e linhas de código sem necessidade... ter um sistema bem definido libera espaço de processamento mental, reduzindo o stress e me permitindo focar na informação
 
 ---
 ## princípios
@@ -15,14 +15,16 @@ nada é definitivo e não há problema em se corrigir, procurar fontes controver
 
 ---------------
 ## o fluxo da informação
->[!todo]
->popular essa área :)
-
-### tags
-#semente
-
-#comofazer
-
+### 🌿matinho
+uma nota surge como um #matinho. crio uma página vazia com um conteúdo que gostaria de trazer por aqui, mas ainda não tenho nada anotado. funciona como um lembrete de um tema que sei que preciso escrever sobre.
+### 🌱semente 
+anotações soltas, pensamentos e ideias. uma #semente pode ser feita de notas de um workshop, uma ideia que tive enquanto estava fazendo outra coisa, um trecho de algo que li e quero pesquisar mais... uma semente é plantada e depois deve ser cultivada.
+### 🪴plantinha
+uma semente, depois de cultivada, vai tomando forma. começo a aprofundar a pesquisa, trago uma fonte nova, escrevo meu ponto de vista sobre. a #plantinha é uma fase intermediária onde o que é escrito começa a madurecer.
+### 🌳árvore
+uma #árvore é o mais próximo de permanente que uma nota pode chegar (pensando que nada é exatamente permanente e poder ser revisado sempre que necessário). uma nota que amadureceu, foi alimentada com fontes, pesquisada e reescrita até que eu esteja satisfeita com a forma como ela aborda um assunto.
+### 🍎fruto
+nem toda árvore precisa dar frutos, mas caso um assunto renda um post de blog, um projeto ou algo do tipo, esse #fruto deve ser linkado à árvore que o originou.
 
 ---------------------
 ## ferramentas
@@ -32,5 +34,3 @@ nada é definitivo e não há problema em se corrigir, procurar fontes controver
 - [github pages](https://pages.github.com/): para hospedar tudo isso. como minhas notas ficam guardadas no github, posso utilizar o versionamento para verificar o histórico delas e como evoluíram.
 - [aws route 53](https://aws.amazon.com/pt/route53/): gerenciamento de DNS
 - [aws certificate manager](https://aws.amazon.com/certificate-manager/): certificado SSL/TLS
-----------
-

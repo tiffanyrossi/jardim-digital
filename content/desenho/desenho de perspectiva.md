@@ -2,8 +2,12 @@
 "title:": 
 "alias:": 
 "draft:": "false"
-tags: 
+tags:
+  - matinho
 "description:":
 ---
->[!todo] to-do
-> - popular essa página
+>[!note] matinho 🌿
+>opa! surgiu um [[2_pkm#🌿matinho|🌿matinho]] aqui. em breve vai virar  [[2_pkm#🌱semente|🌱semente]] :)
+
+
+![[Pasted image 20240505100429.png]]

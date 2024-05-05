@@ -1,13 +1,16 @@
 ---
-"title:": 
+"title:": 🌱 indieweb
 "alias:": 
 "draft:": "false"
 tags:
   - "#semente"
+  - semente
+  - matinho
 "description:":
 ---
->[!todo] to-do
-> - popular essa página
+>[!note] matinho 🌿
+>opa! surgiu um [[2_pkm#🌿matinho|🌿matinho]] aqui. em breve vai virar  [[2_pkm#🌱semente|🌱semente]] :)
 
-
+----
+#### 🔗 links
 - [Getting Started - IndieWeb](https://indieweb.org/Getting_Started)
