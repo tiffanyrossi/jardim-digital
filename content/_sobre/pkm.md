@@ -30,8 +30,8 @@ uma semente, depois de cultivada, vai tomando forma. começo a aprofundar a pesq
 ### 🌳árvore
 uma #árvore é o mais próximo de permanente que uma nota pode chegar (pensando que nada é exatamente permanente e poder ser revisado sempre que necessário). uma nota que amadureceu, foi alimentada com fontes, pesquisada e reescrita até que eu esteja satisfeita com a forma como ela aborda um assunto.
 ### outros
-#### 🌿matinho
-uma nota vazia é um #matinho, criada para um conteúdo que gostaria de trazer para cá, mas ainda não tenho nada anotado. funciona como um lembrete de um tema que sei que preciso escrever sobre.
+#### 🧺 vaso
+uma nota vazia é um #vaso, criada para receber um conteúdo que gostaria de trazer para cá, mas ainda não tenho nada anotado. funciona como um lembrete de uma semente que precisa ser plantada.
 #### 🍎fruto
 nem toda árvore precisa dar frutos, mas caso um assunto renda um post de blog, um projeto ou algo do tipo, esse #fruto deve ser linkado à árvore que o originou.
 #### 🐝 pólen
