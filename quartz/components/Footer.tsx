@@ -16,12 +16,12 @@ export default ((opts?: Options) => {
         <hr />
         <p>
           {i18n(cfg.locale).components.footer.credits} © {year} 🤍 {i18n(cfg.locale).components.footer.createdWith}{" "}
-          <a href="https://quartz.jzhao.xyz/">quartz v{version}</a>
+          <a href="https://quartz.jzhao.xyz/" target="_blank">quartz v{version}</a>
         </p>
         <ul>
           {Object.entries(links).map(([text, link]) => (
             <li>
-              <a href={link}>{text}</a>
+              <a href={link} target="_blank">{text}</a>
             </li>
           ))}
         </ul>

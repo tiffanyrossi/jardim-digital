@@ -15,7 +15,7 @@ const config: QuartzConfig = {
     locale: "pt-BR",
     baseUrl: "wiki.tiffs.dev",
     ignorePatterns: ["_journal", "_personal", "_templates", ".obsidian"],
-    defaultDateType: "created",
+    defaultDateType: "modified",
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
@@ -52,7 +52,7 @@ const config: QuartzConfig = {
     transformers: [
       Plugin.FrontMatter(),
       Plugin.CreatedModifiedDate({
-        priority: ["frontmatter", "filesystem"],
+        priority: ["git"],
       }),
       Plugin.Latex({ renderEngine: "katex" }),
       Plugin.SyntaxHighlighting({
