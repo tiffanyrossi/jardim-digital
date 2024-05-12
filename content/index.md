@@ -25,7 +25,7 @@ me baseio no método [[zettelkasten]] para construir meu [[jardim digital]] - ou
 
 ----
 ## ⌚ agora
-📖 acabei de começar a ler _**[[Gödel, Escher, Bach|Gödel, Escher, Bach: an Eternal Golden Braid]]**_, de [Douglas Hofstadter](https://en.wikipedia.org/wiki/Douglas_Hofstadter). o livro tem mais de 700 páginas, é pesado e complexo - além de estar em inglês. não sei onde estava com a cabeça quando decidir ler esse tijolo, mas estou animada.
+📖 acabei de começar a ler _**[[gödel, escher, bach|Gödel, Escher, Bach: an Eternal Golden Braid]]**_, de [Douglas Hofstadter](https://en.wikipedia.org/wiki/Douglas_Hofstadter). o livro tem mais de 700 páginas, é pesado e complexo - além de estar em inglês. não sei onde estava com a cabeça quando decidir ler esse tijolo, mas estou animada.
 
 📖 estou estudando **algoritmos** pelo livro _**Entendendo Algoritmos**_, de [Aditya Y. Bhargava](https://www.amazon.com.br/s/ref=dp_byline_sr_book_1?ie=UTF8&field-author=Aditya+Y.+Bhargava&text=Aditya+Y.+Bhargava&sort=relevancerank&search-alias=stripbooks).
 
