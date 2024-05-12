@@ -20,7 +20,7 @@ me baseio no método [[zettelkasten]] para construir meu [[jardim digital]] - ou
 | assunto                       | o que ler                                                                   |
 | ----------------------------- | --------------------------------------------------------------------------- |
 | desenvolvimento de software   | [[fundamentos de API REST]] \| [[fundamentos de java]] \| [[notação Big O]] |
-| gastronomia                   | [[características dos vinhos]]                                              |
+| comer & beber                 | [[vinho/]]                                                                  |
 | gerenciamento de conhecimento | [[aprender em público]] \| [[jardim digital]] \| [[pkm]]                    |
 
 ----

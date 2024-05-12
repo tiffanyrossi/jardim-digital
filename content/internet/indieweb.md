@@ -14,3 +14,6 @@ tags:
 ----
 #### 🔗 links
 - [Getting Started - IndieWeb](https://indieweb.org/Getting_Started)
+- [Small Technology Foundation](https://small-tech.org/about/)
+- [web0 manifesto](https://web0.small-web.org/)
+- [Quit Social Media](https://quitsocialmedia.club/solutions/)
