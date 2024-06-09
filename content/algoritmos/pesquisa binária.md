@@ -15,7 +15,7 @@ na *pesquisa simples*, a busca é feita tentando adivinhar a posição de determ
 ## pesquisa binária
 já na pesquisa binária, é possível chutar um número intermediário e descobrir se a posição a ser localizada está abaixo ou acima dele. desta forma, a cada tentativa se eliminam metade dos números restantes. por exemplo, buscando uma posição entre 1 a 100 e chutando a 50ª posição, é possível saber se a posição buscada é maior ou menor do que 50. assim já foram eliminadas metade das posições em apenas uma tentativa. 
 
-para uma lista de $n$ números, a pesquisa binária precisa de no máximo $log_2n$ tentativas para retornar o valor correto, enquanto a pesquisa simples precisa de até $n$ etapas. para entender melhor: [[logaritmos]]. 
+para uma lista de $n$ números, a pesquisa binária precisa de no máximo $log_2n$ tentativas para retornar o valor correto, enquanto a pesquisa simples precisa de até $n$ etapas. para entender melhor: [[entendendo logaritmos]]. 
 
 > [!info]
 > a pesquisa binária só funciona quando a lista está ordenada.
@@ -111,7 +111,7 @@ uma dos critérios na escolha de qual algoritmo utilizar é o [[notação Big O#
 
 como a **pesquisa simples** se dá pela busca de número por número, o número máximo de tentativas para se chegar ao resultado é igual ao tamanho da lista. assim, ela funciona com **tempo de execução linear**. uma lista de $100$ números precisa de até $100$ tentativas.
 
-no caso da pesquisa binária, existe uma economia de tempo, pois ela funciona com [[logaritmos|tempo de execução logarítmico]]. nessa situação, uma mesma lista de $100$ números precisa de até $7$ tentativas para encontrar o item buscado.
+no caso da pesquisa binária, existe uma economia de tempo, pois ela funciona com [[entendendo logaritmos|tempo de execução logarítmico]]. nessa situação, uma mesma lista de $100$ números precisa de até $7$ tentativas para encontrar o item buscado.
 
 tempo de execução linear = $O(n)$
 tempo de execução logarítmico = $O(log_{n})$

@@ -11,7 +11,7 @@ export default {
       abstract: "resumo",
       info: "info",
       todo: "to-do",
-      tip: "cica",
+      tip: "dica",
       success: "sucesso",
       question: "pergunta",
       warning: "aviso",
@@ -45,7 +45,7 @@ export default {
     },
     transcludes: {
       transcludeOf: ({ targetSlug }) => `transcrever de ${targetSlug}`,
-      linkToOriginal: "link ao original",
+      linkToOriginal: "link para o original",
     },
     search: {
       title: "buscar",
@@ -64,8 +64,8 @@ export default {
       lastFewNotes: ({ count }) => `últimas ${count} notas`,
     },
     error: {
-      title: "não encontrado",
-      notFound: "esta página é privada ou não existe.",
+      title: "ops",
+      notFound: "esta página é privada ou ainda não existe.",
     },
     folderContent: {
       folder: "arquivo",

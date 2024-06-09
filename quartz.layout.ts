@@ -7,7 +7,7 @@ export const sharedPageComponents: SharedLayout = {
   header: [],
   footer: Component.Footer({
     links: {
-      "sobre": "/_sobre/sobre-mim",
+      "sobre": "/_o-que-é-isso",
       "twitter" : "https://twitter.com/tiffsrc",
       "links": "http://tiffs.dev",
       "rss": "https://wiki.tiffs.dev/index.xml"
@@ -22,6 +22,8 @@ export const defaultContentPageLayout: PageLayout = {
     Component.ArticleTitle(),
     Component.ContentMeta(),
     Component.TagList(),
+    Component.Guestbook(),
+
   ],
   left: [
     Component.PageTitle(),

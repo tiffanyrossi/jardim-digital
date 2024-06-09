@@ -7,6 +7,6 @@ tags:
 "description:":
 ---
 >[!note] 🧺 vaso
->opa! surgiu um [[pkm#🧺 vaso|🧺 vaso]] novo. em breve vou plantar uma  [[pkm#🌱semente|🌱semente]] por aqui :)
+>opa! surgiu um [[_o que é isso#🧺 vaso|🧺 vaso]] novo. em breve vou plantar uma  [[_o que é isso#🌱semente|🌱semente]] por aqui :)
 
 ![[Pasted image 20240505211926.png]]
