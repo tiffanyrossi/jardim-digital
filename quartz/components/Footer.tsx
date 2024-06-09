@@ -14,8 +14,6 @@ export default ((opts?: Options) => {
     return (
       <footer class={`${displayClass ?? ""}`}>
         <hr />
-        <div class="giscus"></div>
-        <hr />
         <p>
           {i18n(cfg.locale).components.footer.credits} © {year} 🤍 {i18n(cfg.locale).components.footer.createdWith}{" "}
           <a href="https://quartz.jzhao.xyz/" target="_blank">quartz v{version}</a>
@@ -32,5 +30,10 @@ export default ((opts?: Options) => {
   }
 
   Footer.css = style
+  
+  // code for giscus comments (place inside footer element):
+  // <hr />
+  // <div class="giscus"></div>
+
   return Footer
 }) satisfies QuartzComponentConstructor

@@ -7,7 +7,8 @@ tags:
 ---
 olá! 👋 meu nome é **Tiffany Rossi**, sou uma **desenvolvedora de software** e este é meu [[jardim digital]], um espaço onde torno minhas anotações públicas, organizadas pelas suas relações e contextos compartilhados. 
 
-![[tiff.png]]
+![[photo 1.jpg]]
+
 ## internet
 minha jornada virtual se iniciou em 2002, quando os modems chiavam e páginas pessoais se estabeleciam como formas de expressão online. o meu primeiro contato com um computador também foi meu primeiro contato com os blogs, que me intrigaram e encantaram na mesma proporção.
 
