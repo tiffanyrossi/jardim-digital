@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "☠️ tiffs.dev",
+    pageTitle: "☠️ wiki.tiffs.dev",
     enableSPA: true,
     enablePopovers: true,
     analytics: null,

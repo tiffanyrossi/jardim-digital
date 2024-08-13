@@ -23,4 +23,4 @@ me baseio no método [[zettelkasten]] para construir meu [[jardim digital]] - ou
 | ----------------------------- | --------------------------------------------------------------------------- |
 | desenvolvimento de software   | [[fundamentos de API REST]] \| [[fundamentos de java]] \| [[notação Big O]] |
 | comer & beber                 | [[vinho/]]                                                                  |
-| gerenciamento de conhecimento | [[aprender em público]] \| [[jardim digital]] \| [[_o que é isso]]                    |
+| gerenciamento de conhecimento | [[aprender em público]] \| [[jardim digital]] \| [[_o que é isso]]          |

@@ -8,8 +8,8 @@ export const sharedPageComponents: SharedLayout = {
   footer: Component.Footer({
     links: {
       "sobre": "/_o-que-é-isso",
-      "twitter" : "https://twitter.com/tiffsrc",
-      "links": "http://tiffs.dev",
+      "links": "https://tiffs.dev",
+      "blog": "https://blog.tiffs.dev",
       "rss": "https://wiki.tiffs.dev/index.xml"
     },
   }),
