@@ -6,9 +6,11 @@ title: 🪴 boas-vindas
 tags: 
 "description:":
 ---
-olá! eu sou [[_quem sou eu|Tiffany Rossi]] e este é um espaço público onde compartilho minhas anotações, insights, ideias e aprendizados, acumulando conhecimento pessoal em um espaço explorável.
+olá! eu sou a [Tiffany](https://blog.tiffs.dev/sobre) e este é um espaço público onde compartilho minhas anotações, insights, ideias e aprendizados, acumulando conhecimento pessoal em um espaço explorável.
 
->[!tip] saiba [[_o que estou fazendo agora|no que estou metida agora]] - projetos em que estou trabalhando, ideias recentes, livros que estou lendo e outras bobeirinhas :).
+>+ saiba [o que tenho feito](https://blog.tiffs.dev/now) - projetos em que estou trabalhando, ideias recentes, livros que estou lendo e outras bobeirinhas :)
+>+ leia as coisas que escrevo mais livremente no [meu blog](https://blog.tiffs.dev).
+
 
 minhas notas são organizadas com base em suas **conexões**, deixando quem navega livre para escolher qual trilha seguir. meu objetivo é organizar as informações de forma parecida com a qual a mente humana funciona, conectando e relacionando ideias e pensamentos. para entender melhor como as coisas se organizam por aqui, conheça meu [[_o que é isso|sistema pessoal de gerenciamento de conhecimentos]].
 
