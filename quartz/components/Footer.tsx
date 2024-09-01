@@ -21,7 +21,7 @@ export default ((opts?: Options) => {
         <ul>
           {Object.entries(links).map(([text, link]) => (
             <li>
-              <a href={link} target="_blank">{text}</a>
+              <a href={link} target="_blank" rel="me">{text}</a>
             </li>
           ))}
         </ul>
