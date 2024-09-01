@@ -10,7 +10,7 @@ export const sharedPageComponents: SharedLayout = {
       "sobre": "/_o-que-é-isso",
       "links": "https://tiffs.dev",
       "blog": "https://blog.tiffs.dev",
-      "mastodon": "https://todon.eu/@tiffs",
+      "mastodon": "https://ursal.zone/@tiffs",
       "rss": "https://wiki.tiffs.dev/index.xml"
     },
   }),
