@@ -7,10 +7,6 @@ tags:
   - "#semente"
 "description:":
 ---
->[!todo] to-do
-> - popular essa página
-
-
 vinho é uma bebida alcoólica, feita a partir da fermentação de [[tipos de uva|uvas]]. 
 ## características
 1. [[doçura]]
