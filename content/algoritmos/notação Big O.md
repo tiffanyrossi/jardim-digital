@@ -4,8 +4,8 @@
 "draft:": "false"
 tags:
   - algoritmos
-  - "#planta"
-"description:":
+"description:": 
+tipo: planta
 ---
 a notação big O é uma notação que determina a rapidez de um algoritmo.
 

@@ -4,8 +4,8 @@
 "draft:": "false"
 tags:
   - java
-  - vaso
-"description:":
+"description:": 
+tipo: vaso
 ---
 >[!note] 🧺 vaso
 >opa! surgiu um [[_o que é isso#🧺 vaso|🧺 vaso]] novo. em breve vou plantar uma  [[_o que é isso#🌱semente|🌱semente]] por aqui :)

@@ -4,8 +4,8 @@
 "draft:": "false"
 tags:
   - java
-  - "#semente"
-"description:":
+"description:": 
+tipo: semente
 ---
 java é uma das plataformas mais utilizadas no mundo para desenvolvimento de aplicações, além disso é uma das linguagens de programação mais utilizadas no mundo. a *plataforma java* entrega um ambiente completo de desenvolvimento e execução de programas, composta por:
 - [[#linguagem java|a linguagem de programação java]], uma linguagem de alto nível orientada a objetos;

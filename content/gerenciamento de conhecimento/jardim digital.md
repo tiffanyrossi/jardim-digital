@@ -3,8 +3,9 @@
 "alias:": 
 "draft:": "false"
 tags:
-  - "#semente"
-"description:":
+  - meta
+"description:": 
+tipo: semente
 ---
 > "um jardim é uma coleção de **ideias em desenvolvimento**, que não são estritamente organizadas por sua data de publicação. essas notas são essencialmente exploratórias – notas são conectadas entre si através de associações de contexto. elas não são refinadas ou completas – as notas são publicadas como pensamentos inacabados, que irão crescer e evoluir com o tempo. elas são menos rígidas, menos performáticas, e menos perfeitas do que os sites pessoais que costumamos ver."
 > 

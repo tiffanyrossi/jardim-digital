@@ -2,9 +2,9 @@
 "title:": 
 "alias:": 
 "draft:": "false"
-tags:
-  - "#planta"
-"description:":
+tags: 
+"description:": 
+tipo: planta
 ---
 na matemática, uma prova apresenta uma argumentação lógica para demonstrar que uma afirmação (um [[o que é um teorema|teorema]]) é verdadeira. esse processo é, também, um exercício de raciocínio lógico e de compreensão das relações entre os diferentes conceitos matemáticos.
 

@@ -4,8 +4,8 @@
 "draft:": "false"
 tags:
   - música
-  - "#semente"
-"description:":
+"description:": 
+tipo: semente
 ---
 > "qualquer elemento, [motivo](https://pt.wikipedia.org/wiki/Motivo_(m%C3%BAsica) "Motivo (música)") ou pequena peça musical que originou alguma [variação](https://pt.wikipedia.org/wiki/Varia%C3%A7%C3%A3o_(m%C3%BAsica) "Variação (música)") se torna um *tema* a partir desse momento." — _Encyclopédie Fasquelle_, 1958
 

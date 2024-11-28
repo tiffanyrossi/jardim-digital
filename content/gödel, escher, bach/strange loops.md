@@ -3,8 +3,9 @@
 "alias:": 
 "draft:": "false"
 tags:
-  - vaso
-"description:":
+  - GEB
+"description:": 
+tipo: semente
 ---
 >[!note] strange loops
 > trechos onde o autor cita *strange loops* no livro [[00 gödel, escher, bach - an eternal golden braid|Gödel, Escher, Bach: an Eternal Golden Braid]] e anotações sobre o tema.

@@ -3,9 +3,9 @@
 "alias:": 
 "draft:": "false"
 tags:
-  - "#semente"
   - "#música"
-"description:":
+"description:": 
+tipo: semente
 ---
 cânone é uma técnica de composição em que um [[temas|tema]] é apresentado e depois imitado por outras vozes, de forma polifônica, usando de [[contraponto]]. é uma técnica muito similar à das [[fugas]].
 ## variações
