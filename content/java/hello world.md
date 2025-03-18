@@ -31,5 +31,5 @@ o método `main()`é o ponto de entrada do programa java. é nele que a execuç�
 ### compilação e execução
 passos para executar o programa no terminal:
 1. salvar o arquivo como `HelloWorld.java`
-2. `javac HelloWorld.java`: [[fundamentos de java#javac|compila a classe para bytecode]], gerando um arquivo `HelloWorld.class`. esse arquivo é o que será executado pela [[fundamentos de java#JVM (java virtual machine)|JVM]].
-3. `java HelloWorld`: roda a classe `HelloWorld` do arquivo compilado para bytecode.
+2. `javac HelloWorld.java`: [[fundamentos de java#javac|compila]] a classe para [[bytecode]], gerando um arquivo `HelloWorld.class`. esse arquivo é o que será executado pela [[fundamentos de java#JVM (java virtual machine)|JVM]].
+3. `java HelloWorld`: roda a classe `HelloWorld` do arquivo compilado para [[bytecode]].

@@ -1,0 +1,5 @@
+# This directory is a Syncthing folder marker.
+# Do not delete.
+
+folderID: 7mxmt-jzaml
+created: 2024-11-27T23:52:12-03:00

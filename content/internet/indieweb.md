@@ -6,14 +6,13 @@ tags:
 "description:": 
 tipo: vaso
 ---
->[!note] 🧺 vaso
->opa! surgiu um [[_o que é isso#🧺 vaso|🧺 vaso]] novo. em breve vou plantar uma  [[_o que é isso#🌱semente|🌱semente]] por aqui :)
 
-![[Pasted image 20240505211926.png]]
+> [!quote] indieweb
+> "a **indieweb** é uma alternativa à 'web corporativa' baseada em pessoas.
+> somos uma comunidade de sites independentes e pessoais, baseada nos princípios de: possuir seu próprio domínio e usá-lo como sua principal identidade online, publicar primeiro no seu próprio site (e opcionalmente nas outras redes), e poder controlar o seu próprio conteúdo."
+> — [IndieWeb](https://indieweb.org/)
 
-----
-#### 🔗 links
-- [Getting Started - IndieWeb](https://indieweb.org/Getting_Started)
-- [Small Technology Foundation](https://small-tech.org/about/)
-- [web0 manifesto](https://web0.small-web.org/)
-- [Quit Social Media](https://quitsocialmedia.club/solutions/)
+## big tech vs indieweb
+a
+
+

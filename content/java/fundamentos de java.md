@@ -18,10 +18,12 @@ java é uma das plataformas mais utilizadas no mundo para desenvolvimento de apl
 >— **Java: Guia do Programador**, Peter Jandl Junior
 
 ----
-## java SE (standard edition)
-integra os elementos padrão da plataforma, e é utilizada no desenvolvimento de aplicações de pequeno e médio porte. inclui todas as APIs de base, além da JVM.
-## java EE (enterprise edition)
-utilizada em aplicações corporativas complexas. adiciona APIs específicas aos elementos padrão
+## plataformas java
+uma plataforma java inclui a máquina virtual, compilador, bibliotecas e ferramentas.
+### java SE (standard edition)
+integra os elementos padrão da plataforma, e é utilizada no desenvolvimento de aplicações de pequeno e médio porte, e servidores também. inclui todas as APIs de base, além da [[JVM]].
+### jakarta EE (enterprise edition)
+utilizada em aplicações corporativas complexas, que rodam em servidores. além das APIs de base e da [[JVM]], traz bibliotecas e funcionalidades específicas para implementar software distribuído, com suporte a escalabilidade, segurança etc.
 
 ----
 ## linguagem java
@@ -29,7 +31,7 @@ em java, os programas são escritos em arquivos com a extensão `.java`, em ling
 
 para que a máquina possa executar o código, o [[#javac|compilador]] irá transformar os arquivos `.java` em arquivos executáveis intermediários com a extensão `.class`.
 
-os arquivos compilados contêm o código em *bytecode*, uma linguagem de baixo nível que é lida e executada pela [[#JVM (java virtual machine)]].
+os arquivos compilados contêm o código em *[[bytecode]]*, uma linguagem de baixo nível que é lida e executada pela [[#JVM (java virtual machine)]].
 ### características principais
 java é uma linguagem *robusta*, que incentiva o *controle de erros*. usa [[tipos|tipos inteiros e ponto flutuante]] com *aritmética compatível com o padrão IEEE 754*, além de possuir suporte a *UNICODE*. possui *mecanismos de reflexão*, que determinam os tipos e informações dos objetos em uso em tempo de execução.
 
@@ -37,7 +39,7 @@ oferece suporte a tipos genéricos, anotações e [[lambdas em java|expressões 
 #### orientação a objetos
 aplica conceitos de abstração, encapsulamento e hereditariedade. praticamente tudo são classes, exceto os [[tipos#tipos primitivos|tipos primitivos de dados]].
 #### independência de plataforma
-programas são compilados como *bytecodes*, uma forma intermediária de código que funciona como linguagem de máquina para a JVM, que é um interpretador de bytecodes para a plataforma na qual a JVM é executada. como o código é executado na máquina virtual, ela pode ser portada para outras plataformas, como windows ou linux. "*write once, run everywhere*".
+programas são compilados como *[[bytecode|bytecodes]]*, uma forma intermediária de código que funciona como linguagem de máquina para a [[JVM]], que é um interpretador de [[bytecode]] para a plataforma na qual a [[JVM]] é executada. como o código é executado na máquina virtual, ela pode ser portada para outras plataformas, como windows ou linux. "*write once, run everywhere*".
 #### concorrência
 suporte para criação e uso de múltiplas threads, além do uso mais efetivo dos processadores multinúcleo.
 #### segurança
@@ -45,16 +47,16 @@ possui mecanismos de segurança para evitar a alteração indesejada do código,
 #### sem ponteiros
 não permite manipular endereços de memória, nem exige que os objetos criados sejam explicitamente destruídos. a JVM inclui um automatic garbage collector.
 #### performance
-a [[#JDK (java developer kit)|JVM]] tem um compilador JIT (just in time), que converte os bytecodes em código nativo durante a carga do programa.
+a [[#JDK (java developer kit)|JVM]] tem um compilador JIT (just in time), que converte os [[bytecode|bytecodes]] em código nativo durante a carga do programa.
 
 ----
 ## ambiente de desenvolvimento java
 #### JDK (java developer kit)
 conjunto de ferramentas e bibliotecas essenciais para o desenvolvimento de aplicações em java, composta por:
 ##### javac
-compilador, responsável por transformar o código java em *bytecode* (a linguagem entendida pela jvm)
+compilador, responsável por transformar o código java em *[[bytecode]]* (a linguagem entendida pela [[JVM]])
 ##### JVM (java virtual machine)
-é a máquina virtual onde o java é executado. interpreta e executa o código gerado pelo compilador.
+é a [[JVM|máquina virtual onde o java é executado]]. interpreta e executa o código gerado pelo compilador.
 ##### bibliotecas java
 coleções de classes e interfaces pré-definidas que oferecem funcionalidades como conexão com banco de dados, manipulação de arquivos, e muito mais.
 ##### outros
