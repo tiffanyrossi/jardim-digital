@@ -35,7 +35,7 @@
     }
   }
 
-  & > #global-graph-outer {
+  & > .global-graph-outer {
     position: fixed;
     z-index: 9999;
     left: 0;
@@ -50,7 +50,7 @@
       display: inline-block;
     }
 
-    & > #global-graph-container {
+    & > .global-graph-container {
       border: 1px solid var(--lightgray);
       background-color: var(--light);
       border-radius: 5px;
