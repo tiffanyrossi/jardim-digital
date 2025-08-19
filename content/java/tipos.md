@@ -1,10 +1,11 @@
 ---
-"title:": 
-"alias:": 
+"title:":
+"alias:":
 "draft:": "false"
-tags: 
-"description:": 
-tipo: semente
+tags:
+  - tipos/🌱semente
+  - java
+"description:":
 ---
 java é uma **linguagem fortemente tipada**, ou seja, precisa da declaração de tipos de todas as variáveis que são utilizadas no código. tipos são como categorias, e definem a natureza dos dados manipulados no código.
 

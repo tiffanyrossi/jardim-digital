@@ -1,3 +1,16 @@
+---
+title:
+aliases:
+draft: "false"
+tags:
+  - tipos/🧺vaso
+description:
+permalink:
+comments:
+---
+>[!note] 
+> página em construção - em breve vou plantar uma  [[sobre essa página#🌱semente|🌱semente]] por aqui :)
+
 o que é o mastodon - resumo rápido e prático
 o que é descentralização
 motivos para ir para o mastodon - lista prática

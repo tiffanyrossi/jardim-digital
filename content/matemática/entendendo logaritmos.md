@@ -1,10 +1,11 @@
 ---
-"title:": 
-"alias:": 
+"title:":
+"alias:":
 "draft:": "false"
-"description:": 
+"description:":
 tags:
   - logaritmos
+  - tipos/🌱semente
 ---
 
 > "logaritmos são uma outra forma de pensar em expoentes"

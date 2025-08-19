@@ -1,13 +1,23 @@
 ---
-"title:": 🗓️ xx/xx/xxxx
+"title:":
 tags:
   - "#daily"
 ---
-### 💭 ideias
------
+# 🧠 brain dump
+- 
 
-### 📝 notas
-----
+_____________
+# 📌 registros
+- 
 
-### 🔎 pesquisar
-----
+_____________
+# ✏️ lembrar
+- 
+
+_____________________
+# 🔎 pesquisar
+- 
+
+_______________
+# 🔗 links
+-  

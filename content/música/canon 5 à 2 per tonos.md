@@ -1,10 +1,11 @@
 ---
-"title:": 
-"alias:": 
+"title:":
+"alias:":
 "draft:": "false"
-tags: 
-"description:": 
-tipo: planta
+tags:
+  - música
+  - tipos/🌱semente
+"description:":
 ---
 o [[cânones|cânone]] 5 à 2 per Tonos, de [[01.01 introduction - a musico-logical offering#bach|Sebastian Bach]], também conhecido como "*an endlessly rising canon*", é intrigante e também um pouco paradoxal. a peça, que faz parte da coletânea [[01.01 introduction - a musico-logical offering#bach|The Musical Offering]], apresenta uma ilusão auditiva de ascensão infinita, causada pela combinação muito bem executada de alguns elementos musicais.
 

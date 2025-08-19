@@ -1,9 +1,10 @@
 ---
-"title:": 
-"alias:": 
+"title:":
+"alias:":
 "draft:": "false"
 tags:
   - API
+  - tipos/🪴planta
 "description:":
 ---
 o versionamento é a capacidade de adicionar, remover e alterar funcionalidades em uma API, sem afetar a interface existente e sem quebrar a aplicação para os clientes que já a consomem. é uma prática essencial para garantir a evolução controlada e a compatibilidade das APIs ao longo do tempo.

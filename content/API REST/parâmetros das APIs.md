@@ -1,9 +1,10 @@
 ---
-"title:": 
-"alias:": 
+"title:":
+"alias:":
 "draft:": "false"
 tags:
   - API
+  - tipos/🪴planta
 "description:":
 ---
 ## path parameters

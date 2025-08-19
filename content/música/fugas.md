@@ -1,11 +1,11 @@
 ---
-"title:": 
-"alias:": 
+"title:":
+"alias:":
 "draft:": "false"
 tags:
   - música
-"description:": 
-tipo: semente
+  - tipos/🌱semente
+"description:":
 ---
 a fuga, assim como um [[cânones|cânone]], é uma composição musical com várias vozes anunciando um mesmo [[temas|tema]]. essas vozes possuem um atraso entre elas e se entrelaçam, fazendo [[contraponto]] entre vozes. fugas normalmente são **monotemáticas**, ou seja, costumam possuir apenas um [[temas|tema]].
 

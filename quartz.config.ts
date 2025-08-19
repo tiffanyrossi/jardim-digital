@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "jardim digital da tiffs ☠️",
+    pageTitle: "cultivating chaos ☠️",
     pageTitleSuffix: " | wiki.tiffs.dev",
     enableSPA: true,
     enablePopovers: true,
@@ -17,13 +17,13 @@ const config: QuartzConfig = {
     },
     locale: "pt-BR",
     baseUrl: "wiki.tiffs.dev",
-    ignorePatterns: ["private", "_templates", ".obsidian"],
+    ignorePatterns: ["private", "_templates", ".obsidian", "_files", ".trash", ".stfolder"],
     defaultDateType: "modified",
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "DM Serif Text",
+        header: "Urbanist",
         body: "Urbanist",
         code: "Fira Code",
       },
@@ -66,10 +66,12 @@ const config: QuartzConfig = {
         },
         keepBackground: false,
       }),
-      Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
+      Plugin.ObsidianFlavoredMarkdown({
+        enableInHtmlEmbed: false,
+     }),
       Plugin.GitHubFlavoredMarkdown(),
       Plugin.TableOfContents(),
-      Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
+      Plugin.CrawlLinks({ markdownLinkResolution: "shortest", externalLinkIcon: true }),
       Plugin.Description(),
       Plugin.Latex({ renderEngine: "katex" }),
     ],
@@ -83,6 +85,7 @@ const config: QuartzConfig = {
       Plugin.ContentIndex({
         enableSiteMap: true,
         enableRSS: true,
+        rssFullHtml: true,
       }), 
       Plugin.Assets(),
       Plugin.Static(),
@@ -90,6 +93,7 @@ const config: QuartzConfig = {
       Plugin.NotFoundPage(),
       // Comment out CustomOgImages to speed up build time
       Plugin.CustomOgImages(),
+      Plugin.ComponentResources(),
     ],
   },
 }

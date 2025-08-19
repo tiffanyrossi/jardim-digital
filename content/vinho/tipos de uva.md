@@ -2,7 +2,9 @@
 "title:": tipos de uva
 "alias:": uvas viníferas
 "draft:": "false"
-tags: 
+tags:
+  - vinho
+  - tipos/🌱semente
 "description:":
 ---
 no mundo, existem mais de 10 mil tipos diferentes de uvas. dentro do contexto de vinhos, as uvas são divididas em dois grupos: viníferas e não viníferas.

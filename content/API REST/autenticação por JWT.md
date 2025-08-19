@@ -1,10 +1,11 @@
 ---
-"title:": 
-"alias:": 
+"title:":
+"alias:":
 "draft:": "false"
 tags:
   - API
   - "#JWT"
+  - tipos/🪴planta
 "description:":
 ---
 **JWT**, que significa *JSON Web Token*, é um padrão de autenticação amplamente utilizado em APIs. sendo um modelo flexível e seguro, o JWT é uma escolha popular para a implementação de autenticação em APIs, oferecendo segurança e eficiência na transmissão de dados sensíveis.
