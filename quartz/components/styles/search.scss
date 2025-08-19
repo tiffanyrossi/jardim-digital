@@ -3,6 +3,22 @@
 .search {
   min-width: fit-content;
   max-width: 14rem;
+<<<<<<< HEAD
+  flex-grow: 0.3;
+
+  & > #search-icon {
+    background-color: var(--lightgray);
+    border-radius: 4px;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    white-space: nowrap;
+
+    & > div {
+      flex-grow: 1;
+    }
+=======
   @media all and ($mobile) {
     flex-grow: 0.3;
   }
@@ -22,6 +38,7 @@
     white-space: nowrap;
     width: 100%;
     justify-content: space-between;
+>>>>>>> main
 
     & > p {
       display: inline;
@@ -42,7 +59,11 @@
     }
   }
 
+<<<<<<< HEAD
+  & > #search-container {
+=======
   & > .search-container {
+>>>>>>> main
     position: fixed;
     contain: layout;
     z-index: 999;
@@ -58,13 +79,21 @@
       display: inline-block;
     }
 
+<<<<<<< HEAD
+    & > #search-space {
+=======
     & > .search-space {
+>>>>>>> main
       width: 65%;
       margin-top: 12vh;
       margin-left: auto;
       margin-right: auto;
 
+<<<<<<< HEAD
+      @media all and (max-width: $fullPageWidth) {
+=======
       @media all and not ($desktop) {
+>>>>>>> main
         width: 90%;
       }
 
@@ -91,7 +120,11 @@
         }
       }
 
+<<<<<<< HEAD
+      & > #search-layout {
+=======
       & > .search-layout {
+>>>>>>> main
         display: none;
         flex-direction: row;
         border: 1px solid var(--lightgray);
@@ -102,11 +135,19 @@
           display: flex;
         }
 
+<<<<<<< HEAD
+        &[data-preview] > #results-container {
+          flex: 0 0 min(30%, 450px);
+        }
+
+        @media all and (min-width: $tabletBreakpoint) {
+=======
         &[data-preview] > .results-container {
           flex: 0 0 min(30%, 450px);
         }
 
         @media all and not ($mobile) {
+>>>>>>> main
           &[data-preview] {
             & .result-card > p.preview {
               display: none;
@@ -132,6 +173,14 @@
           border-radius: 5px;
         }
 
+<<<<<<< HEAD
+        @media all and (max-width: $tabletBreakpoint) {
+          & > #preview-container {
+            display: none !important;
+          }
+
+          &[data-preview] > #results-container {
+=======
         @media all and ($mobile) {
           flex-direction: column;
 
@@ -140,6 +189,7 @@
           }
 
           &[data-preview] > .results-container {
+>>>>>>> main
             width: 100%;
             height: auto;
             flex: 0 0 100%;
@@ -152,8 +202,12 @@
           scroll-margin-top: 2rem;
         }
 
+<<<<<<< HEAD
+        & > #preview-container {
+=======
         & > .preview-container {
           flex-grow: 1;
+>>>>>>> main
           display: block;
           overflow: hidden;
           font-family: inherit;
@@ -173,7 +227,11 @@
           }
         }
 
+<<<<<<< HEAD
+        & > #results-container {
+=======
         & > .results-container {
+>>>>>>> main
           overflow-y: auto;
 
           & .result-card {
@@ -206,12 +264,15 @@
               margin: 0;
             }
 
+<<<<<<< HEAD
+=======
             @media all and not ($mobile) {
               & > p.card-description {
                 display: none;
               }
             }
 
+>>>>>>> main
             & > ul.tags {
               margin-top: 0.45rem;
               margin-bottom: 0;

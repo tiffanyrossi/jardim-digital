@@ -1,4 +1,17 @@
 import { i18n } from "../i18n"
+<<<<<<< HEAD
+import { FullSlug, joinSegments, pathToRoot } from "../util/path"
+import { JSResourceToScriptElement } from "../util/resources"
+import { googleFontHref } from "../util/theme"
+import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
+
+export default (() => {
+  const Head: QuartzComponent = ({ cfg, fileData, externalResources }: QuartzComponentProps) => {
+    const title = fileData.frontmatter?.title ?? i18n(cfg.locale).propertyDefaults.title
+    const description =
+      fileData.description?.trim() ?? i18n(cfg.locale).propertyDefaults.description
+    const { css, js } = externalResources
+=======
 import { FullSlug, getFileExtension, joinSegments, pathToRoot } from "../util/path"
 import { CSSResourceToStyleElement, JSResourceToScriptElement } from "../util/resources"
 import { googleFontHref, googleFontSubsetHref } from "../util/theme"
@@ -21,10 +34,20 @@ export default (() => {
       unescapeHTML(fileData.description?.trim() ?? i18n(cfg.locale).propertyDefaults.description)
 
     const { css, js, additionalHead } = externalResources
+>>>>>>> main
 
     const url = new URL(`https://${cfg.baseUrl ?? "example.com"}`)
     const path = url.pathname as FullSlug
     const baseDir = fileData.slug === "404" ? path : pathToRoot(fileData.slug!)
+<<<<<<< HEAD
+
+    const iconPath = joinSegments(baseDir, "static/icon.png")
+    const ogImagePath = `https://${cfg.baseUrl}/static/og.png`
+
+    return (
+      <head>
+        <title>{title} | wiki.tiffs.dev</title>
+=======
     const iconPath = joinSegments(baseDir, "static/icon.png")
 
     // Url of current page
@@ -39,12 +62,32 @@ export default (() => {
     return (
       <head>
         <title>{title}</title>
+>>>>>>> main
         <meta charSet="utf-8" />
         {cfg.theme.cdnCaching && cfg.theme.fontOrigin === "googleFonts" && (
           <>
             <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link rel="preconnect" href="https://fonts.gstatic.com" />
             <link rel="stylesheet" href={googleFontHref(cfg.theme)} />
+<<<<<<< HEAD
+          </>
+        )}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        {cfg.baseUrl && <meta property="og:image" content={ogImagePath} />}
+        <meta property="og:width" content="1200" />
+        <meta property="og:height" content="675" />
+        <link rel="icon" href={iconPath} />
+        <meta name="description" content={description} />
+        <meta name="generator" content="Quartz" />
+        {css.map((href) => (
+          <link key={href} href={href} rel="stylesheet" type="text/css" spa-preserve />
+        ))}
+        {js
+          .filter((resource) => resource.loadTime === "beforeDOMReady")
+          .map((res) => JSResourceToScriptElement(res, true))}
+=======
             {cfg.theme.typography.title && (
               <link rel="stylesheet" href={googleFontSubsetHref(cfg.theme, cfg.pageTitle)} />
             )}
@@ -97,6 +140,7 @@ export default (() => {
             return resource
           }
         })}
+>>>>>>> main
       </head>
     )
   }

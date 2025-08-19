@@ -1,9 +1,19 @@
+<<<<<<< HEAD
+import { FullSlug, resolveRelative } from "../util/path"
+=======
 import { FullSlug, isFolderPath, resolveRelative } from "../util/path"
+>>>>>>> main
 import { QuartzPluginData } from "../plugins/vfile"
 import { Date, getDate } from "./Date"
 import { QuartzComponent, QuartzComponentProps } from "./types"
 import { GlobalConfiguration } from "../cfg"
 
+<<<<<<< HEAD
+export function byDateAndAlphabetical(
+  cfg: GlobalConfiguration,
+): (f1: QuartzPluginData, f2: QuartzPluginData) => number {
+  return (f1, f2) => {
+=======
 export type SortFn = (f1: QuartzPluginData, f2: QuartzPluginData) => number
 
 export function byDateAndAlphabetical(cfg: GlobalConfiguration): SortFn {
@@ -35,6 +45,7 @@ export function byDateAndAlphabeticalFolderFirst(cfg: GlobalConfiguration): Sort
     if (!f1IsFolder && f2IsFolder) return 1
 
     // If both are folders or both are files, sort by date/alphabetical
+>>>>>>> main
     if (f1.dates && f2.dates) {
       // sort descending
       return getDate(cfg, f2)!.getTime() - getDate(cfg, f1)!.getTime()
@@ -54,12 +65,19 @@ export function byDateAndAlphabeticalFolderFirst(cfg: GlobalConfiguration): Sort
 
 type Props = {
   limit?: number
+<<<<<<< HEAD
+} & QuartzComponentProps
+
+export const PageList: QuartzComponent = ({ cfg, fileData, allFiles, limit }: Props) => {
+  let list = allFiles.sort(byDateAndAlphabetical(cfg))
+=======
   sort?: SortFn
 } & QuartzComponentProps
 
 export const PageList: QuartzComponent = ({ cfg, fileData, allFiles, limit, sort }: Props) => {
   const sorter = sort ?? byDateAndAlphabeticalFolderFirst(cfg)
   let list = allFiles.sort(sorter)
+>>>>>>> main
   if (limit) {
     list = list.slice(0, limit)
   }
@@ -73,9 +91,17 @@ export const PageList: QuartzComponent = ({ cfg, fileData, allFiles, limit, sort
         return (
           <li class="section-li">
             <div class="section">
+<<<<<<< HEAD
+              {page.dates && (
+                <p class="meta">
+                  <Date date={getDate(cfg, page)!} locale={cfg.locale} />
+                </p>
+              )}
+=======
               <p class="meta">
                 {page.dates && <Date date={getDate(cfg, page)!} locale={cfg.locale} />}
               </p>
+>>>>>>> main
               <div class="desc">
                 <h3>
                   <a href={resolveRelative(fileData.slug!, page.slug!)} class="internal">

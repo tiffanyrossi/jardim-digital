@@ -29,9 +29,12 @@ export default {
       lightMode: "라이트 모드",
       darkMode: "다크 모드",
     },
+<<<<<<< HEAD
+=======
     readerMode: {
       title: "리더 모드",
     },
+>>>>>>> main
     explorer: {
       title: "탐색기",
     },
@@ -68,7 +71,10 @@ export default {
     error: {
       title: "Not Found",
       notFound: "페이지가 존재하지 않거나 비공개 설정이 되어 있습니다.",
+<<<<<<< HEAD
+=======
       home: "홈페이지로 돌아가기",
+>>>>>>> main
     },
     folderContent: {
       folder: "폴더",

@@ -15,6 +15,10 @@ vinho é uma bebida alcoólica, feita a partir da fermentação de [[tipos de uv
 3. [[taninos]]
 4. [[álcool]]
 5. [[corpo]]
+<<<<<<< HEAD
+ 
+=======
 
 >[!note] 
 > página em construção - em breve vou plantar uma  [[sobre essa página#🌱semente|🌱semente]] por aqui :)
+>>>>>>> main

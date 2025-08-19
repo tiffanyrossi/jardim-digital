@@ -7,7 +7,10 @@ export interface ColorScheme {
   secondary: string
   tertiary: string
   highlight: string
+<<<<<<< HEAD
+=======
   textHighlight: string
+>>>>>>> main
 }
 
 interface Colors {
@@ -15,6 +18,13 @@ interface Colors {
   darkMode: ColorScheme
 }
 
+<<<<<<< HEAD
+export interface Theme {
+  typography: {
+    header: string
+    body: string
+    code: string
+=======
 export type FontSpecification =
   | string
   | {
@@ -29,6 +39,7 @@ export interface Theme {
     header: FontSpecification
     body: FontSpecification
     code: FontSpecification
+>>>>>>> main
   }
   cdnCaching: boolean
   colors: Colors
@@ -38,6 +49,14 @@ export interface Theme {
 export type ThemeKey = keyof Colors
 
 const DEFAULT_SANS_SERIF =
+<<<<<<< HEAD
+  '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif'
+const DEFAULT_MONO = "ui-monospace, SFMono-Regular, SF Mono, Menlo, monospace"
+
+export function googleFontHref(theme: Theme) {
+  const { code, header, body } = theme.typography
+  return `https://fonts.googleapis.com/css2?family=${code}&family=${header}:wght@400;700&family=${body}:ital,wght@0,400;0,600;1,400;1,600&display=swap`
+=======
   'system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"'
 const DEFAULT_MONO = "ui-monospace, SFMono-Regular, SF Mono, Menlo, monospace"
 
@@ -138,6 +157,7 @@ export async function processGoogleFonts(
   }
 
   return { processedStylesheet, fontFiles }
+>>>>>>> main
 }
 
 export function joinStyles(theme: Theme, ...stylesheet: string[]) {
@@ -153,12 +173,19 @@ ${stylesheet.join("\n\n")}
   --secondary: ${theme.colors.lightMode.secondary};
   --tertiary: ${theme.colors.lightMode.tertiary};
   --highlight: ${theme.colors.lightMode.highlight};
+<<<<<<< HEAD
+
+  --headerFont: "${theme.typography.header}", ${DEFAULT_SANS_SERIF};
+  --bodyFont: "${theme.typography.body}", ${DEFAULT_SANS_SERIF};
+  --codeFont: "${theme.typography.code}", ${DEFAULT_MONO};
+=======
   --textHighlight: ${theme.colors.lightMode.textHighlight};
 
   --titleFont: "${getFontSpecificationName(theme.typography.title || theme.typography.header)}", ${DEFAULT_SANS_SERIF};
   --headerFont: "${getFontSpecificationName(theme.typography.header)}", ${DEFAULT_SANS_SERIF};
   --bodyFont: "${getFontSpecificationName(theme.typography.body)}", ${DEFAULT_SANS_SERIF};
   --codeFont: "${getFontSpecificationName(theme.typography.code)}", ${DEFAULT_MONO};
+>>>>>>> main
 }
 
 :root[saved-theme="dark"] {
@@ -170,7 +197,10 @@ ${stylesheet.join("\n\n")}
   --secondary: ${theme.colors.darkMode.secondary};
   --tertiary: ${theme.colors.darkMode.tertiary};
   --highlight: ${theme.colors.darkMode.highlight};
+<<<<<<< HEAD
+=======
   --textHighlight: ${theme.colors.darkMode.textHighlight};
+>>>>>>> main
 }
 `
 }

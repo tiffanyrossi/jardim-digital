@@ -29,9 +29,12 @@ export default {
       lightMode: "Sáng",
       darkMode: "Tối",
     },
+<<<<<<< HEAD
+=======
     readerMode: {
       title: "Chế độ đọc",
     },
+>>>>>>> main
     explorer: {
       title: "Trong bài này",
     },
@@ -68,7 +71,10 @@ export default {
     error: {
       title: "Không Tìm Thấy",
       notFound: "Trang này được bảo mật hoặc không tồn tại.",
+<<<<<<< HEAD
+=======
       home: "Trở về trang chủ",
+>>>>>>> main
     },
     folderContent: {
       folder: "Thư Mục",

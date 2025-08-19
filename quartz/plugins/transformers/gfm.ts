@@ -14,7 +14,13 @@ const defaultOptions: Options = {
   linkHeadings: true,
 }
 
+<<<<<<< HEAD
+export const GitHubFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options> | undefined> = (
+  userOpts,
+) => {
+=======
 export const GitHubFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>> = (userOpts) => {
+>>>>>>> main
   const opts = { ...defaultOptions, ...userOpts }
   return {
     name: "GitHubFlavoredMarkdown",

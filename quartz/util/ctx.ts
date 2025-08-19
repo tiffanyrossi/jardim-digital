@@ -1,20 +1,35 @@
 import { QuartzConfig } from "../cfg"
+<<<<<<< HEAD
+import { FullSlug } from "./path"
+=======
 import { QuartzPluginData } from "../plugins/vfile"
 import { FileTrieNode } from "./fileTrie"
 import { FilePath, FullSlug } from "./path"
+>>>>>>> main
 
 export interface Argv {
   directory: string
   verbose: boolean
   output: string
   serve: boolean
+<<<<<<< HEAD
+  fastRebuild: boolean
+=======
   watch: boolean
+>>>>>>> main
   port: number
   wsPort: number
   remoteDevHost?: string
   concurrency?: number
 }
 
+<<<<<<< HEAD
+export interface BuildCtx {
+  argv: Argv
+  cfg: QuartzConfig
+  allSlugs: FullSlug[]
+}
+=======
 export type BuildTimeTrieData = QuartzPluginData & {
   slug: string
   title: string
@@ -48,3 +63,4 @@ export function trieFromAllFiles(allFiles: QuartzPluginData[]): FileTrieNode<Bui
 }
 
 export type WorkerSerializableBuildCtx = Omit<BuildCtx, "cfg" | "trie">
+>>>>>>> main

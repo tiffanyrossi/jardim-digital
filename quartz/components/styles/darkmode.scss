@@ -1,4 +1,19 @@
 .darkmode {
+<<<<<<< HEAD
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin: 0 10px;
+
+  & > .toggle {
+    display: none;
+    box-sizing: border-box;
+  }
+
+  & svg {
+    cursor: pointer;
+    opacity: 0;
+=======
   cursor: pointer;
   padding: 0;
   position: relative;
@@ -11,6 +26,7 @@
   flex-shrink: 0;
 
   & svg {
+>>>>>>> main
     position: absolute;
     width: 20px;
     height: 20px;
@@ -28,6 +44,23 @@
   color-scheme: light;
 }
 
+<<<<<<< HEAD
+:root[saved-theme="dark"] .toggle ~ label {
+  & > #dayIcon {
+    opacity: 0;
+  }
+  & > #nightIcon {
+    opacity: 1;
+  }
+}
+
+:root .toggle ~ label {
+  & > #dayIcon {
+    opacity: 1;
+  }
+  & > #nightIcon {
+    opacity: 0;
+=======
 :root[saved-theme="dark"] .darkmode {
   & > .dayIcon {
     display: none;
@@ -43,5 +76,6 @@
   }
   & > .nightIcon {
     display: none;
+>>>>>>> main
   }
 }

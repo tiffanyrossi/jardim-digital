@@ -95,6 +95,8 @@ const [age, setAge] = useState(50)
 const [name, setName] = useState("Taylor")
 ```
 
+<<<<<<< HEAD
+=======
 ### Inline Highlighting
 
 Append {:lang} to the end of inline code to highlight it like a regular code block.
@@ -105,6 +107,7 @@ This is an array `[1, 2, 3]{:js}` of numbers 1 through 3.
 
 This is an array `[1, 2, 3]{:js}` of numbers 1 through 3.
 
+>>>>>>> main
 ### Line numbers
 
 Syntax highlighting has line numbers configured automatically. If you want to start line numbers at a specific number, use `showLineNumbers{number}`:

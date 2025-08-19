@@ -1,6 +1,15 @@
 export { ContentPage } from "./contentPage"
 export { TagPage } from "./tagPage"
 export { FolderPage } from "./folderPage"
+<<<<<<< HEAD
+export { ContentIndex } from "./contentIndex"
+export { AliasRedirects } from "./aliases"
+export { Assets } from "./assets"
+export { Static } from "./static"
+export { ComponentResources } from "./componentResources"
+export { NotFoundPage } from "./404"
+export { CNAME } from "./cname"
+=======
 export { ContentIndex as ContentIndex } from "./contentIndex"
 export { AliasRedirects } from "./aliases"
 export { Assets } from "./assets"
@@ -10,3 +19,4 @@ export { ComponentResources } from "./componentResources"
 export { NotFoundPage } from "./404"
 export { CNAME } from "./cname"
 export { CustomOgImages } from "./ogImage"
+>>>>>>> main

@@ -29,9 +29,12 @@ export default {
       lightMode: "Mode clair",
       darkMode: "Mode sombre",
     },
+<<<<<<< HEAD
+=======
     readerMode: {
       title: "Mode lecture",
     },
+>>>>>>> main
     explorer: {
       title: "Explorateur",
     },
@@ -68,7 +71,10 @@ export default {
     error: {
       title: "Introuvable",
       notFound: "Cette page est soit privée, soit elle n'existe pas.",
+<<<<<<< HEAD
+=======
       home: "Retour à la page d'accueil",
+>>>>>>> main
     },
     folderContent: {
       folder: "Dossier",

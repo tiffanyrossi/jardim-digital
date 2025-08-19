@@ -8,6 +8,10 @@ import {
   simplifySlug,
   splitAnchor,
   transformLink,
+<<<<<<< HEAD
+  joinSegments,
+=======
+>>>>>>> main
 } from "../../util/path"
 import path from "path"
 import { visit } from "unist-util-visit"
@@ -32,7 +36,11 @@ const defaultOptions: Options = {
   externalLinkIcon: true,
 }
 
+<<<<<<< HEAD
+export const CrawlLinks: QuartzTransformerPlugin<Partial<Options> | undefined> = (userOpts) => {
+=======
 export const CrawlLinks: QuartzTransformerPlugin<Partial<Options>> = (userOpts) => {
+>>>>>>> main
   const opts = { ...defaultOptions, ...userOpts }
   return {
     name: "LinkProcessing",
@@ -65,9 +73,13 @@ export const CrawlLinks: QuartzTransformerPlugin<Partial<Options>> = (userOpts) 
                     type: "element",
                     tagName: "svg",
                     properties: {
+<<<<<<< HEAD
+                      class: "external-icon",
+=======
                       "aria-hidden": "true",
                       class: "external-icon",
                       style: "max-width:0.8em;max-height:0.8em",
+>>>>>>> main
                       viewBox: "0 0 512 512",
                     },
                     children: [
@@ -94,7 +106,11 @@ export const CrawlLinks: QuartzTransformerPlugin<Partial<Options>> = (userOpts) 
                 }
                 node.properties.className = classes
 
+<<<<<<< HEAD
+                if (opts.openLinksInNewTab) {
+=======
                 if (isExternal && opts.openLinksInNewTab) {
+>>>>>>> main
                   node.properties.target = "_blank"
                 }
 

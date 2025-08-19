@@ -1,5 +1,8 @@
+<<<<<<< HEAD
+=======
 @use "sass:map";
 
+>>>>>>> main
 @use "./variables.scss" as *;
 @use "./syntax.scss";
 @use "./callouts.scss";
@@ -11,8 +14,15 @@ html {
   width: 100vw;
 }
 
+<<<<<<< HEAD
+body,
+section {
+  margin: 0;
+  max-width: 100%;
+=======
 body {
   margin: 0;
+>>>>>>> main
   box-sizing: border-box;
   background-color: var(--light);
   font-family: var(--bodyFont);
@@ -20,10 +30,18 @@ body {
 }
 
 .text-highlight {
+<<<<<<< HEAD
+  background-color: #fff23688;
+  padding: 0 0.1rem;
+  border-radius: 5px;
+}
+
+=======
   background-color: var(--textHighlight);
   padding: 0 0.1rem;
   border-radius: 5px;
 }
+>>>>>>> main
 ::selection {
   background: color-mix(in srgb, var(--tertiary) 60%, rgba(255, 255, 255, 0));
   color: var(--darkgray);
@@ -42,6 +60,12 @@ ul,
 .math {
   color: var(--darkgray);
   fill: var(--darkgray);
+<<<<<<< HEAD
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+
+=======
   hyphens: auto;
 }
 
@@ -58,12 +82,15 @@ ul,
   /* tr and td removed from list of selectors for overflow-wrap, allowing them to use default 'normal' property value */
 }
 
+>>>>>>> main
 .math {
   &.math-display {
     text-align: center;
   }
 }
 
+<<<<<<< HEAD
+=======
 article {
   > mjx-container.MathJax,
   blockquote > div > mjx-container.MathJax {
@@ -79,6 +106,7 @@ article {
   }
 }
 
+>>>>>>> main
 strong {
   font-weight: $semiBoldWeight;
 }
@@ -90,7 +118,11 @@ a {
   color: var(--secondary);
 
   &:hover {
+<<<<<<< HEAD
+    color: var(--tertiary) !important;
+=======
     color: var(--tertiary);
+>>>>>>> main
   }
 
   &.internal {
@@ -100,6 +132,10 @@ a {
     border-radius: 5px;
     line-height: 1.4rem;
 
+<<<<<<< HEAD
+    &:has(> img) {
+      background-color: none;
+=======
     &.broken {
       color: var(--secondary);
       opacity: 0.5;
@@ -111,6 +147,7 @@ a {
 
     &:has(> img) {
       background-color: transparent;
+>>>>>>> main
       border-radius: 0;
       padding: 0;
     }
@@ -131,6 +168,11 @@ a {
   }
 }
 
+<<<<<<< HEAD
+.desktop-only {
+  display: initial;
+  @media all and (max-width: $fullPageWidth) {
+=======
 .flex-component {
   display: flex;
 }
@@ -144,12 +186,16 @@ a {
     &.flex-component {
       display: none;
     }
+>>>>>>> main
     display: none;
   }
 }
 
 .mobile-only {
   display: none;
+<<<<<<< HEAD
+  @media all and (max-width: $fullPageWidth) {
+=======
   &.flex-component {
     display: none;
   }
@@ -157,16 +203,29 @@ a {
     &.flex-component {
       display: flex;
     }
+>>>>>>> main
     display: initial;
   }
 }
 
 .page {
+<<<<<<< HEAD
+  @media all and (max-width: $fullPageWidth) {
+    margin: 0 auto;
+    padding: 0 1rem;
+    max-width: $pageWidth;
+  }
+
+  & article {
+    & > h1 {
+      font-size: 1rem;
+=======
   max-width: calc(#{map.get($breakpoints, desktop)} + 300px);
   margin: 0 auto;
   & article {
     & > h1 {
       font-size: 2rem;
+>>>>>>> main
     }
 
     & li:has(> input[type="checkbox"]) {
@@ -191,6 +250,40 @@ a {
   }
 
   & > #quartz-body {
+<<<<<<< HEAD
+    width: 100%;
+    display: flex;
+    font-size: 0.9rem;
+    @media all and (max-width: $fullPageWidth) {
+      flex-direction: column;
+    }
+
+    & .sidebar {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      top: 0;
+      width: $sidePanelWidth;
+      margin-top: $topSpacing;
+      box-sizing: border-box;
+      padding: 0 4rem;
+      position: fixed;
+      @media all and (max-width: $fullPageWidth) {
+        position: initial;
+        flex-direction: row;
+        padding: 0;
+        width: initial;
+        margin-top: 2rem;
+      }
+    }
+
+    & .sidebar.left {
+      left: calc(calc(100vw - $pageWidth) / 2 - $sidePanelWidth);
+      @media all and (max-width: $fullPageWidth) {
+        gap: 0;
+        align-items: center;
+=======
     display: grid;
     grid-template-columns: #{map.get($desktopGrid, templateColumns)};
     grid-template-rows: #{map.get($desktopGrid, templateRows)};
@@ -243,10 +336,42 @@ a {
         flex-direction: row;
         padding: 0;
         padding-top: 2rem;
+>>>>>>> main
       }
     }
 
     & .sidebar.right {
+<<<<<<< HEAD
+      right: calc(calc(100vw - $pageWidth) / 2 - $sidePanelWidth);
+      flex-wrap: wrap;
+      & > * {
+        @media all and (max-width: $fullPageWidth) {
+          flex: 1;
+          min-width: 140px;
+        }
+      }
+    }
+  }
+
+  & .page-header {
+    width: $pageWidth;
+    margin: $topSpacing auto 0 auto;
+    @media all and (max-width: $fullPageWidth) {
+      width: initial;
+      margin-top: 2rem;
+    }
+  }
+
+  & .center,
+  & footer {
+    margin-left: auto;
+    margin-right: auto;
+    width: $pageWidth;
+    @media all and (max-width: $fullPageWidth) {
+      width: initial;
+      margin-left: 0;
+      margin-right: 0;
+=======
       grid-area: grid-sidebar-right;
       margin-right: 0;
       flex-direction: column;
@@ -307,6 +432,7 @@ a {
     }
     & footer {
       margin-left: 0;
+>>>>>>> main
     }
   }
 }
@@ -391,10 +517,13 @@ h6 {
   &[id]:hover > a {
     opacity: 1;
   }
+<<<<<<< HEAD
+=======
 
   &:not([id]) > a[role="anchor"] {
     display: none;
   }
+>>>>>>> main
 }
 
 // typography improvements
@@ -435,7 +564,11 @@ figure[data-rehype-pretty-code-figure] {
     font-size: 0.9rem;
     padding: 0.1rem 0.5rem;
     border: 1px solid var(--lightgray);
+<<<<<<< HEAD
+    width: max-content;
+=======
     width: fit-content;
+>>>>>>> main
     border-radius: 5px;
     margin-bottom: -0.5rem;
     color: var(--darkgray);
@@ -466,7 +599,11 @@ pre {
     counter-increment: line 0;
     display: grid;
     padding: 0.5rem 0;
+<<<<<<< HEAD
+    overflow-x: scroll;
+=======
     overflow-x: auto;
+>>>>>>> main
 
     & [data-highlighted-chars] {
       background-color: var(--highlight);
@@ -559,7 +696,10 @@ img {
   max-width: 100%;
   border-radius: 5px;
   margin: 1rem 0;
+<<<<<<< HEAD
+=======
   content-visibility: auto;
+>>>>>>> main
 }
 
 p > img + em {
@@ -582,25 +722,51 @@ video {
 }
 
 .spacer {
+<<<<<<< HEAD
+  flex: 1 1 auto;
+=======
   flex: 2 1 auto;
 }
 
 div:has(> .overflow) {
   max-height: 100%;
   overflow-y: hidden;
+>>>>>>> main
 }
 
 ul.overflow,
 ol.overflow {
+<<<<<<< HEAD
+  max-height: 400;
+  overflow-y: auto;
+=======
   max-height: 100%;
   overflow-y: auto;
   width: 100%;
   margin-bottom: 0;
+>>>>>>> main
 
   // clearfix
   content: "";
   clear: both;
 
+<<<<<<< HEAD
+  & > li:last-of-type {
+    margin-bottom: 30px;
+  }
+
+  &:after {
+    pointer-events: none;
+    content: "";
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    background: linear-gradient(transparent 0px, var(--light));
+=======
   & > li.overflow-end {
     height: 0.5rem;
     margin: 0;
@@ -608,6 +774,7 @@ ol.overflow {
 
   &.gradient-active {
     mask-image: linear-gradient(to bottom, black calc(100% - 50px), transparent 100%);
+>>>>>>> main
   }
 }
 
@@ -618,6 +785,11 @@ ol.overflow {
 }
 
 .katex-display {
+<<<<<<< HEAD
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+=======
   display: initial;
   overflow-x: auto;
   overflow-y: hidden;
@@ -641,3 +813,4 @@ iframe.pdf {
   transition: width 0.2s ease;
   z-index: 9999;
 }
+>>>>>>> main

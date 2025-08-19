@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+const bufferPx = 150
+const observer = new IntersectionObserver((entries) => {
+  for (const entry of entries) {
+    const slug = entry.target.id
+    const tocEntryElement = document.querySelector(`a[data-for="${slug}"]`)
+    const windowHeight = entry.rootBounds?.height
+    if (windowHeight && tocEntryElement) {
+      if (entry.boundingClientRect.y < windowHeight) {
+        tocEntryElement.classList.add("in-view")
+      } else {
+        tocEntryElement.classList.remove("in-view")
+=======
 const observer = new IntersectionObserver((entries) => {
   for (const entry of entries) {
     const slug = entry.target.id
@@ -8,6 +21,7 @@ const observer = new IntersectionObserver((entries) => {
         tocEntryElements.forEach((tocEntryElement) => tocEntryElement.classList.add("in-view"))
       } else {
         tocEntryElements.forEach((tocEntryElement) => tocEntryElement.classList.remove("in-view"))
+>>>>>>> main
       }
     }
   }
@@ -15,6 +29,27 @@ const observer = new IntersectionObserver((entries) => {
 
 function toggleToc(this: HTMLElement) {
   this.classList.toggle("collapsed")
+<<<<<<< HEAD
+  const content = this.nextElementSibling as HTMLElement | undefined
+  if (!content) return
+  content.classList.toggle("collapsed")
+  content.style.maxHeight = content.style.maxHeight === "0px" ? content.scrollHeight + "px" : "0px"
+}
+
+function setupToc() {
+  const toc = document.getElementById("toc")
+  if (toc) {
+    const collapsed = toc.classList.contains("collapsed")
+    const content = toc.nextElementSibling as HTMLElement | undefined
+    if (!content) return
+    content.style.maxHeight = collapsed ? "0px" : content.scrollHeight + "px"
+    toc.addEventListener("click", toggleToc)
+    window.addCleanup(() => toc.removeEventListener("click", toggleToc))
+  }
+}
+
+window.addEventListener("resize", setupToc)
+=======
   this.setAttribute(
     "aria-expanded",
     this.getAttribute("aria-expanded") === "true" ? "false" : "true",
@@ -34,6 +69,7 @@ function setupToc() {
   }
 }
 
+>>>>>>> main
 document.addEventListener("nav", () => {
   setupToc()
 

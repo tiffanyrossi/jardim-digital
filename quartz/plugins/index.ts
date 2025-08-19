@@ -6,10 +6,16 @@ export function getStaticResourcesFromPlugins(ctx: BuildCtx) {
   const staticResources: StaticResources = {
     css: [],
     js: [],
+<<<<<<< HEAD
+  }
+
+  for (const transformer of ctx.cfg.plugins.transformers) {
+=======
     additionalHead: [],
   }
 
   for (const transformer of [...ctx.cfg.plugins.transformers, ...ctx.cfg.plugins.emitters]) {
+>>>>>>> main
     const res = transformer.externalResources ? transformer.externalResources(ctx) : {}
     if (res?.js) {
       staticResources.js.push(...res.js)
@@ -17,9 +23,12 @@ export function getStaticResourcesFromPlugins(ctx: BuildCtx) {
     if (res?.css) {
       staticResources.css.push(...res.css)
     }
+<<<<<<< HEAD
+=======
     if (res?.additionalHead) {
       staticResources.additionalHead.push(...res.additionalHead)
     }
+>>>>>>> main
   }
 
   // if serving locally, listen for rebuilds and reload the page
@@ -32,10 +41,17 @@ export function getStaticResourcesFromPlugins(ctx: BuildCtx) {
       loadTime: "afterDOMReady",
       contentType: "inline",
       script: `
+<<<<<<< HEAD
+            const socket = new WebSocket('${wsUrl}')
+            // reload(true) ensures resources like images and scripts are fetched again in firefox
+            socket.addEventListener('message', () => document.location.reload(true))
+          `,
+=======
         const socket = new WebSocket('${wsUrl}')
         // reload(true) ensures resources like images and scripts are fetched again in firefox
         socket.addEventListener('message', () => document.location.reload(true))
       `,
+>>>>>>> main
     })
   }
 

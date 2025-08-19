@@ -1,5 +1,9 @@
 @use "../../styles/variables.scss" as *;
 
+<<<<<<< HEAD
+button#explorer {
+  all: unset;
+=======
 @media all and ($mobile) {
   .page > #quartz-body {
     // Shift page position when toggling Explorer on mobile.
@@ -92,6 +96,7 @@
 
 button.mobile-explorer,
 button.desktop-explorer {
+>>>>>>> main
   background-color: transparent;
   border: none;
   text-align: left;
@@ -101,6 +106,58 @@ button.desktop-explorer {
   display: flex;
   align-items: center;
 
+<<<<<<< HEAD
+  & h1 {
+    font-size: 0.8rem;
+    display: inline-block;
+    margin: 0;
+  }
+
+  & .fold {
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+    opacity: 0.8;
+  }
+
+  &.collapsed .fold {
+    transform: rotateZ(-90deg);
+  }
+}
+
+.folder-outer {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease-in-out;
+}
+
+.folder-outer.open {
+  grid-template-rows: 1fr;
+}
+
+.folder-outer > ul {
+  overflow: hidden;
+}
+
+#explorer-content {
+  list-style: none;
+  overflow: hidden;
+  max-height: none;
+  transition: max-height 0.35s ease;
+  margin-top: 0.5rem;
+
+  &.collapsed > .overflow::after {
+    opacity: 0;
+  }
+
+  & ul {
+    list-style: none;
+    margin: 0.08rem 0;
+    padding: 0;
+    transition:
+      max-height 0.35s ease,
+      transform 0.35s ease,
+      opacity 0.2s ease;
+=======
   & h2 {
     font-size: 1rem;
     display: inline-block;
@@ -120,10 +177,22 @@ button.desktop-explorer {
     padding: 0;
     overscroll-behavior: contain;
 
+>>>>>>> main
     & li > a {
       color: var(--dark);
       opacity: 0.75;
       pointer-events: all;
+<<<<<<< HEAD
+    }
+  }
+}
+
+svg {
+  pointer-events: all;
+
+  & > polyline {
+    pointer-events: none;
+=======
 
       &.active {
         opacity: 1;
@@ -147,6 +216,7 @@ button.desktop-explorer {
     margin-left: 6px;
     padding-left: 0.8rem;
     border-left: 1px solid var(--lightgray);
+>>>>>>> main
   }
 }
 
@@ -159,7 +229,11 @@ button.desktop-explorer {
   & div > a {
     color: var(--secondary);
     font-family: var(--headerFont);
+<<<<<<< HEAD
+    font-size: 0.6rem;
+=======
     font-size: 0.95rem;
+>>>>>>> main
     font-weight: $semiBoldWeight;
     line-height: 1.5rem;
     display: inline-block;
@@ -199,7 +273,10 @@ button.desktop-explorer {
   cursor: pointer;
   transition: transform 0.3s ease;
   backface-visibility: visible;
+<<<<<<< HEAD
+=======
   flex-shrink: 0;
+>>>>>>> main
 }
 
 li:has(> .folder-outer:not(.open)) > .folder-container > svg {
@@ -210,6 +287,17 @@ li:has(> .folder-outer:not(.open)) > .folder-container > svg {
   color: var(--tertiary);
 }
 
+<<<<<<< HEAD
+.no-background::after {
+  background: none !important;
+}
+
+#explorer-end {
+  // needs height so IntersectionObserver gets triggered
+  height: 4px;
+  // remove default margin from li
+  margin: 0;
+=======
 .explorer {
   @media all and ($mobile) {
     &.collapsed {
@@ -267,4 +355,5 @@ li:has(> .folder-outer:not(.open)) > .folder-container > svg {
   @media all and ($mobile) {
     overscroll-behavior: none;
   }
+>>>>>>> main
 }

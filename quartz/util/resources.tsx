@@ -1,6 +1,9 @@
 import { randomUUID } from "crypto"
 import { JSX } from "preact/jsx-runtime"
+<<<<<<< HEAD
+=======
 import { QuartzPluginData } from "../plugins/vfile"
+>>>>>>> main
 
 export type JSResource = {
   loadTime: "beforeDOMReady" | "afterDOMReady"
@@ -17,12 +20,15 @@ export type JSResource = {
     }
 )
 
+<<<<<<< HEAD
+=======
 export type CSSResource = {
   content: string
   inline?: boolean
   spaPreserve?: boolean
 }
 
+>>>>>>> main
 export function JSResourceToScriptElement(resource: JSResource, preserve?: boolean): JSX.Element {
   const scriptType = resource.moduleType ?? "application/javascript"
   const spaPreserve = preserve ?? resource.spaPreserve
@@ -43,6 +49,11 @@ export function JSResourceToScriptElement(resource: JSResource, preserve?: boole
   }
 }
 
+<<<<<<< HEAD
+export interface StaticResources {
+  css: string[]
+  js: JSResource[]
+=======
 export function CSSResourceToStyleElement(resource: CSSResource, preserve?: boolean): JSX.Element {
   const spaPreserve = preserve ?? resource.spaPreserve
   if (resource.inline ?? false) {
@@ -71,4 +82,5 @@ export function concatenateResources(...resources: StringResource[]): StringReso
   return resources
     .filter((resource): resource is string | string[] => resource !== undefined)
     .flat()
+>>>>>>> main
 }
