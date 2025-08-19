@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import chalk from "chalk"
 import pretty from "pretty-time"
+=======
+import pretty from "pretty-time"
+import { styleText } from "util"
+>>>>>>> main
 
 export class PerfTimer {
   evts: { [key: string]: [number, number] }
@@ -14,6 +19,10 @@ export class PerfTimer {
   }
 
   timeSince(evtName?: string): string {
+<<<<<<< HEAD
     return chalk.yellow(pretty(process.hrtime(this.evts[evtName ?? "start"])))
+=======
+    return styleText("yellow", pretty(process.hrtime(this.evts[evtName ?? "start"])))
+>>>>>>> main
   }
 }

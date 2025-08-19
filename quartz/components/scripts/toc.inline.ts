@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const bufferPx = 150
 const observer = new IntersectionObserver((entries) => {
   for (const entry of entries) {
@@ -9,6 +10,18 @@ const observer = new IntersectionObserver((entries) => {
         tocEntryElement.classList.add("in-view")
       } else {
         tocEntryElement.classList.remove("in-view")
+=======
+const observer = new IntersectionObserver((entries) => {
+  for (const entry of entries) {
+    const slug = entry.target.id
+    const tocEntryElements = document.querySelectorAll(`a[data-for="${slug}"]`)
+    const windowHeight = entry.rootBounds?.height
+    if (windowHeight && tocEntryElements.length > 0) {
+      if (entry.boundingClientRect.y < windowHeight) {
+        tocEntryElements.forEach((tocEntryElement) => tocEntryElement.classList.add("in-view"))
+      } else {
+        tocEntryElements.forEach((tocEntryElement) => tocEntryElement.classList.remove("in-view"))
+>>>>>>> main
       }
     }
   }
@@ -16,6 +29,7 @@ const observer = new IntersectionObserver((entries) => {
 
 function toggleToc(this: HTMLElement) {
   this.classList.toggle("collapsed")
+<<<<<<< HEAD
   const content = this.nextElementSibling as HTMLElement | undefined
   if (!content) return
   content.classList.toggle("collapsed")
@@ -35,6 +49,27 @@ function setupToc() {
 }
 
 window.addEventListener("resize", setupToc)
+=======
+  this.setAttribute(
+    "aria-expanded",
+    this.getAttribute("aria-expanded") === "true" ? "false" : "true",
+  )
+  const content = this.nextElementSibling as HTMLElement | undefined
+  if (!content) return
+  content.classList.toggle("collapsed")
+}
+
+function setupToc() {
+  for (const toc of document.getElementsByClassName("toc")) {
+    const button = toc.querySelector(".toc-header")
+    const content = toc.querySelector(".toc-content")
+    if (!button || !content) return
+    button.addEventListener("click", toggleToc)
+    window.addCleanup(() => button.removeEventListener("click", toggleToc))
+  }
+}
+
+>>>>>>> main
 document.addEventListener("nav", () => {
   setupToc()
 

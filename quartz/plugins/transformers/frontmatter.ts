@@ -3,7 +3,11 @@ import remarkFrontmatter from "remark-frontmatter"
 import { QuartzTransformerPlugin } from "../types"
 import yaml from "js-yaml"
 import toml from "toml"
+<<<<<<< HEAD
 import { slugTag } from "../../util/path"
+=======
+import { FilePath, FullSlug, getFileExtension, slugifyFilePath, slugTag } from "../../util/path"
+>>>>>>> main
 import { QuartzPluginData } from "../vfile"
 import { i18n } from "../../i18n"
 
@@ -40,16 +44,42 @@ function coerceToArray(input: string | string[]): string[] | undefined {
     .map((tag: string | number) => tag.toString())
 }
 
+<<<<<<< HEAD
 export const FrontMatter: QuartzTransformerPlugin<Partial<Options> | undefined> = (userOpts) => {
   const opts = { ...defaultOptions, ...userOpts }
   return {
     name: "FrontMatter",
     markdownPlugins({ cfg }) {
+=======
+function getAliasSlugs(aliases: string[]): FullSlug[] {
+  const res: FullSlug[] = []
+  for (const alias of aliases) {
+    const isMd = getFileExtension(alias) === "md"
+    const mockFp = isMd ? alias : alias + ".md"
+    const slug = slugifyFilePath(mockFp as FilePath)
+    res.push(slug)
+  }
+
+  return res
+}
+
+export const FrontMatter: QuartzTransformerPlugin<Partial<Options>> = (userOpts) => {
+  const opts = { ...defaultOptions, ...userOpts }
+  return {
+    name: "FrontMatter",
+    markdownPlugins(ctx) {
+      const { cfg, allSlugs } = ctx
+>>>>>>> main
       return [
         [remarkFrontmatter, ["yaml", "toml"]],
         () => {
           return (_, file) => {
+<<<<<<< HEAD
             const { data } = matter(Buffer.from(file.value), {
+=======
+            const fileData = Buffer.from(file.value as Uint8Array)
+            const { data } = matter(fileData, {
+>>>>>>> main
               ...opts,
               engines: {
                 yaml: (s) => yaml.load(s, { schema: yaml.JSON_SCHEMA }) as object,
@@ -67,10 +97,54 @@ export const FrontMatter: QuartzTransformerPlugin<Partial<Options> | undefined> 
             if (tags) data.tags = [...new Set(tags.map((tag: string) => slugTag(tag)))]
 
             const aliases = coerceToArray(coalesceAliases(data, ["aliases", "alias"]))
+<<<<<<< HEAD
             if (aliases) data.aliases = aliases
             const cssclasses = coerceToArray(coalesceAliases(data, ["cssclasses", "cssclass"]))
             if (cssclasses) data.cssclasses = cssclasses
 
+=======
+            if (aliases) {
+              data.aliases = aliases // frontmatter
+              file.data.aliases = getAliasSlugs(aliases)
+              allSlugs.push(...file.data.aliases)
+            }
+
+            if (data.permalink != null && data.permalink.toString() !== "") {
+              data.permalink = data.permalink.toString() as FullSlug
+              const aliases = file.data.aliases ?? []
+              aliases.push(data.permalink)
+              file.data.aliases = aliases
+              allSlugs.push(data.permalink)
+            }
+
+            const cssclasses = coerceToArray(coalesceAliases(data, ["cssclasses", "cssclass"]))
+            if (cssclasses) data.cssclasses = cssclasses
+
+            const socialImage = coalesceAliases(data, ["socialImage", "image", "cover"])
+
+            const created = coalesceAliases(data, ["created", "date"])
+            if (created) {
+              data.created = created
+              data.modified ||= created // if modified is not set, use created
+            }
+
+            const modified = coalesceAliases(data, [
+              "modified",
+              "lastmod",
+              "updated",
+              "last-modified",
+            ])
+            if (modified) data.modified = modified
+            const published = coalesceAliases(data, ["published", "publishDate", "date"])
+            if (published) data.published = published
+
+            if (socialImage) data.socialImage = socialImage
+
+            // Remove duplicate slugs
+            const uniqueSlugs = [...new Set(allSlugs)]
+            allSlugs.splice(0, allSlugs.length, ...uniqueSlugs)
+
+>>>>>>> main
             // fill in frontmatter
             file.data.frontmatter = data as QuartzPluginData["frontmatter"]
           }
@@ -82,17 +156,36 @@ export const FrontMatter: QuartzTransformerPlugin<Partial<Options> | undefined> 
 
 declare module "vfile" {
   interface DataMap {
+<<<<<<< HEAD
+=======
+    aliases: FullSlug[]
+>>>>>>> main
     frontmatter: { [key: string]: unknown } & {
       title: string
     } & Partial<{
         tags: string[]
         aliases: string[]
+<<<<<<< HEAD
         description: string
         publish: boolean
         draft: boolean
         lang: string
         enableToc: string
         cssclasses: string[]
+=======
+        modified: string
+        created: string
+        published: string
+        description: string
+        socialDescription: string
+        publish: boolean | string
+        draft: boolean | string
+        lang: string
+        enableToc: string
+        cssclasses: string[]
+        socialImage: string
+        comments: boolean | string
+>>>>>>> main
       }>
   }
 }

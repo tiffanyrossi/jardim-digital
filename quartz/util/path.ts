@@ -1,8 +1,12 @@
 import { slug as slugAnchor } from "github-slugger"
 import type { Element as HastElement } from "hast"
+<<<<<<< HEAD
 import rfdc from "rfdc"
 
 export const clone = rfdc()
+=======
+import { clone } from "./clone"
+>>>>>>> main
 
 // this file must be isomorphic so it can't use node libs (e.g. path)
 
@@ -39,7 +43,20 @@ export type RelativeURL = SlugLike<"relative">
 export function isRelativeURL(s: string): s is RelativeURL {
   const validStart = /^\.{1,2}/.test(s)
   const validEnding = !endsWith(s, "index")
+<<<<<<< HEAD
   return validStart && validEnding && ![".md", ".html"].includes(_getFileExtension(s) ?? "")
+=======
+  return validStart && validEnding && ![".md", ".html"].includes(getFileExtension(s) ?? "")
+}
+
+export function isAbsoluteURL(s: string): boolean {
+  try {
+    new URL(s)
+  } catch {
+    return false
+  }
+  return true
+>>>>>>> main
 }
 
 export function getFullSlug(window: Window): FullSlug {
@@ -64,7 +81,11 @@ function sluggify(s: string): string {
 
 export function slugifyFilePath(fp: FilePath, excludeExt?: boolean): FullSlug {
   fp = stripSlashes(fp) as FilePath
+<<<<<<< HEAD
   let ext = _getFileExtension(fp)
+=======
+  let ext = getFileExtension(fp)
+>>>>>>> main
   const withoutFileExt = fp.replace(new RegExp(ext + "$"), "")
   if (excludeExt || [".md", ".html", undefined].includes(ext)) {
     ext = ""
@@ -108,10 +129,17 @@ const _rebaseHtmlElement = (el: Element, attr: string, newBase: string | URL) =>
   el.setAttribute(attr, rebased.pathname + rebased.hash)
 }
 export function normalizeRelativeURLs(el: Element | Document, destination: string | URL) {
+<<<<<<< HEAD
   el.querySelectorAll('[href^="./"], [href^="../"]').forEach((item) =>
     _rebaseHtmlElement(item, "href", destination),
   )
   el.querySelectorAll('[src^="./"], [src^="../"]').forEach((item) =>
+=======
+  el.querySelectorAll('[href=""], [href^="./"], [href^="../"]').forEach((item) =>
+    _rebaseHtmlElement(item, "href", destination),
+  )
+  el.querySelectorAll('[src=""], [src^="./"], [src^="../"]').forEach((item) =>
+>>>>>>> main
     _rebaseHtmlElement(item, "src", destination),
   )
 }
@@ -183,10 +211,33 @@ export function slugTag(tag: string) {
 }
 
 export function joinSegments(...args: string[]): string {
+<<<<<<< HEAD
   return args
     .filter((segment) => segment !== "")
     .join("/")
     .replace(/\/\/+/g, "/")
+=======
+  if (args.length === 0) {
+    return ""
+  }
+
+  let joined = args
+    .filter((segment) => segment !== "" && segment !== "/")
+    .map((segment) => stripSlashes(segment))
+    .join("/")
+
+  // if the first segment starts with a slash, add it back
+  if (args[0].startsWith("/")) {
+    joined = "/" + joined
+  }
+
+  // if the last segment is a folder, add a trailing slash
+  if (args[args.length - 1].endsWith("/")) {
+    joined = joined + "/"
+  }
+
+  return joined
+>>>>>>> main
 }
 
 export function getAllSegmentPrefixes(tags: string): string[] {
@@ -234,7 +285,11 @@ export function transformLink(src: FullSlug, target: string, opts: TransformOpti
 }
 
 // path helpers
+<<<<<<< HEAD
 function isFolderPath(fplike: string): boolean {
+=======
+export function isFolderPath(fplike: string): boolean {
+>>>>>>> main
   return (
     fplike.endsWith("/") ||
     endsWith(fplike, "index") ||
@@ -247,7 +302,11 @@ export function endsWith(s: string, suffix: string): boolean {
   return s === suffix || s.endsWith("/" + suffix)
 }
 
+<<<<<<< HEAD
 function trimSuffix(s: string, suffix: string): string {
+=======
+export function trimSuffix(s: string, suffix: string): string {
+>>>>>>> main
   if (endsWith(s, suffix)) {
     s = s.slice(0, -suffix.length)
   }
@@ -259,10 +318,17 @@ function containsForbiddenCharacters(s: string): boolean {
 }
 
 function _hasFileExtension(s: string): boolean {
+<<<<<<< HEAD
   return _getFileExtension(s) !== undefined
 }
 
 function _getFileExtension(s: string): string | undefined {
+=======
+  return getFileExtension(s) !== undefined
+}
+
+export function getFileExtension(s: string): string | undefined {
+>>>>>>> main
   return s.match(/\.[A-Za-z0-9]+$/)?.[0]
 }
 

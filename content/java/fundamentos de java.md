@@ -1,10 +1,11 @@
 ---
 "title:": fundamentos de java
-"alias:": 
+"alias:":
 "draft:": "false"
 tags:
   - java
-"description:": 
+  - tipos/🌱semente
+"description:":
 tipo: semente
 ---
 java é uma das plataformas mais utilizadas no mundo para desenvolvimento de aplicações, além disso é uma das linguagens de programação mais utilizadas no mundo. a *plataforma java* entrega um ambiente completo de desenvolvimento e execução de programas, composta por:

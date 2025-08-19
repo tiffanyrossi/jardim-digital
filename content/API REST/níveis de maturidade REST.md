@@ -1,10 +1,11 @@
 ---
-"title:": 
-"alias:": 
+"title:":
+"alias:":
 "draft:": "false"
 tags:
   - API
   - REST
+  - tipos/🪴planta
 "description:":
 ---
 ## nível 0: pântano de POX (plain old XML)

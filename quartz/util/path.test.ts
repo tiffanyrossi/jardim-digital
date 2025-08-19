@@ -1,7 +1,11 @@
 import test, { describe } from "node:test"
 import * as path from "./path"
 import assert from "node:assert"
+<<<<<<< HEAD
 import { FullSlug, TransformOptions } from "./path"
+=======
+import { FullSlug, TransformOptions, SimpleSlug } from "./path"
+>>>>>>> main
 
 describe("typeguards", () => {
   test("isSimpleSlug", () => {
@@ -38,6 +42,20 @@ describe("typeguards", () => {
     assert(!path.isRelativeURL("./abc/def.md"))
   })
 
+<<<<<<< HEAD
+=======
+  test("isAbsoluteURL", () => {
+    assert(path.isAbsoluteURL("https://example.com"))
+    assert(path.isAbsoluteURL("http://example.com"))
+    assert(path.isAbsoluteURL("ftp://example.com/a/b/c"))
+    assert(path.isAbsoluteURL("http://host/%25"))
+    assert(path.isAbsoluteURL("file://host/twoslashes?more//slashes"))
+
+    assert(!path.isAbsoluteURL("example.com/abc/def"))
+    assert(!path.isAbsoluteURL("abc"))
+  })
+
+>>>>>>> main
   test("isFullSlug", () => {
     assert(path.isFullSlug("index"))
     assert(path.isFullSlug("abc/def"))
@@ -158,6 +176,32 @@ describe("transforms", () => {
       path.isRelativeURL,
     )
   })
+<<<<<<< HEAD
+=======
+
+  test("joinSegments", () => {
+    assert.strictEqual(path.joinSegments("a", "b"), "a/b")
+    assert.strictEqual(path.joinSegments("a/", "b"), "a/b")
+    assert.strictEqual(path.joinSegments("a", "b/"), "a/b/")
+    assert.strictEqual(path.joinSegments("a/", "b/"), "a/b/")
+
+    // preserve leading and trailing slashes
+    assert.strictEqual(path.joinSegments("/a", "b"), "/a/b")
+    assert.strictEqual(path.joinSegments("/a/", "b"), "/a/b")
+    assert.strictEqual(path.joinSegments("/a", "b/"), "/a/b/")
+    assert.strictEqual(path.joinSegments("/a/", "b/"), "/a/b/")
+
+    // lone slash
+    assert.strictEqual(path.joinSegments("/a/", "b", "/"), "/a/b/")
+    assert.strictEqual(path.joinSegments("a/", "b" + "/"), "a/b/")
+
+    // works with protocol specifiers
+    assert.strictEqual(path.joinSegments("https://example.com", "a"), "https://example.com/a")
+    assert.strictEqual(path.joinSegments("https://example.com/", "a"), "https://example.com/a")
+    assert.strictEqual(path.joinSegments("https://example.com", "a/"), "https://example.com/a/")
+    assert.strictEqual(path.joinSegments("https://example.com/", "a/"), "https://example.com/a/")
+  })
+>>>>>>> main
 })
 
 describe("link strategies", () => {
@@ -280,3 +324,53 @@ describe("link strategies", () => {
     })
   })
 })
+<<<<<<< HEAD
+=======
+
+describe("resolveRelative", () => {
+  test("from index", () => {
+    assert.strictEqual(path.resolveRelative("index" as FullSlug, "index" as FullSlug), "./")
+    assert.strictEqual(path.resolveRelative("index" as FullSlug, "abc" as FullSlug), "./abc")
+    assert.strictEqual(
+      path.resolveRelative("index" as FullSlug, "abc/def" as FullSlug),
+      "./abc/def",
+    )
+    assert.strictEqual(
+      path.resolveRelative("index" as FullSlug, "abc/def/ghi" as FullSlug),
+      "./abc/def/ghi",
+    )
+  })
+
+  test("from nested page", () => {
+    assert.strictEqual(path.resolveRelative("abc/def" as FullSlug, "index" as FullSlug), "../")
+    assert.strictEqual(path.resolveRelative("abc/def" as FullSlug, "abc" as FullSlug), "../abc")
+    assert.strictEqual(
+      path.resolveRelative("abc/def" as FullSlug, "abc/def" as FullSlug),
+      "../abc/def",
+    )
+    assert.strictEqual(
+      path.resolveRelative("abc/def" as FullSlug, "ghi/jkl" as FullSlug),
+      "../ghi/jkl",
+    )
+  })
+
+  test("with index paths", () => {
+    assert.strictEqual(path.resolveRelative("abc/index" as FullSlug, "index" as FullSlug), "../")
+    assert.strictEqual(
+      path.resolveRelative("abc/def/index" as FullSlug, "index" as FullSlug),
+      "../../",
+    )
+    assert.strictEqual(path.resolveRelative("index" as FullSlug, "abc/index" as FullSlug), "./abc/")
+    assert.strictEqual(
+      path.resolveRelative("abc/def" as FullSlug, "abc/index" as FullSlug),
+      "../abc/",
+    )
+  })
+
+  test("with simple slugs", () => {
+    assert.strictEqual(path.resolveRelative("abc/def" as FullSlug, "" as SimpleSlug), "../")
+    assert.strictEqual(path.resolveRelative("abc/def" as FullSlug, "ghi" as SimpleSlug), "../ghi")
+    assert.strictEqual(path.resolveRelative("abc/def" as FullSlug, "ghi/" as SimpleSlug), "../ghi/")
+  })
+})
+>>>>>>> main

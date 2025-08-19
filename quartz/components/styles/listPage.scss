@@ -11,9 +11,15 @@ li.section-li {
 
   & > .section {
     display: grid;
+<<<<<<< HEAD
     grid-template-columns: 6em 3fr 1fr;
 
     @media all and (max-width: $mobileBreakpoint) {
+=======
+    grid-template-columns: fit-content(8em) 3fr 1fr;
+
+    @media all and ($mobile) {
+>>>>>>> main
       & > .tags {
         display: none;
       }
@@ -23,9 +29,14 @@ li.section-li {
       background-color: transparent;
     }
 
+<<<<<<< HEAD
     & > .meta {
       margin: 0;
       flex-basis: 6em;
+=======
+    & .meta {
+      margin: 0 1em 0 0;
+>>>>>>> main
       opacity: 0.6;
     }
   }
@@ -33,7 +44,12 @@ li.section-li {
 
 // modifications in popover context
 .popover .section {
+<<<<<<< HEAD
   grid-template-columns: 6em 1fr !important;
+=======
+  grid-template-columns: fit-content(8em) 1fr !important;
+
+>>>>>>> main
   & > .tags {
     display: none;
   }

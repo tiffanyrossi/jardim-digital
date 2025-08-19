@@ -1,8 +1,10 @@
 ---
-"title:": 
-"alias:": 
+"title:":
+"alias:":
 "draft:": "false"
-tags: []
+tags:
+  - tipos/🪴planta
+  - java
 "description:":
 ---
 ## hello world

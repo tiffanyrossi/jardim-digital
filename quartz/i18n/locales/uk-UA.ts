@@ -29,6 +29,12 @@ export default {
       lightMode: "Світлий режим",
       darkMode: "Темний режим",
     },
+<<<<<<< HEAD
+=======
+    readerMode: {
+      title: "Режим читання",
+    },
+>>>>>>> main
     explorer: {
       title: "Провідник",
     },
@@ -54,7 +60,11 @@ export default {
       title: "Зміст",
     },
     contentMeta: {
+<<<<<<< HEAD
       readingTime: ({ minutes }) => `${minutes} min read`,
+=======
+      readingTime: ({ minutes }) => `${minutes} хв читання`,
+>>>>>>> main
     },
   },
   pages: {
@@ -65,6 +75,7 @@ export default {
     error: {
       title: "Не знайдено",
       notFound: "Ця сторінка або приватна, або не існує.",
+<<<<<<< HEAD
     },
     folderContent: {
       folder: "Папка",
@@ -78,6 +89,22 @@ export default {
         count === 1 ? "1 елемент з цим тегом." : `Елементів з цим тегом: ${count}.`,
       showingFirst: ({ count }) => `Показ перших ${count} тегів.`,
       totalTags: ({ count }) => `Всього знайдено тегів: ${count}.`,
+=======
+      home: "Повернутися на головну сторінку",
+    },
+    folderContent: {
+      folder: "Тека",
+      itemsUnderFolder: ({ count }) =>
+        count === 1 ? "У цій теці 1 елемент." : `Елементів у цій теці: ${count}.`,
+    },
+    tagContent: {
+      tag: "Мітка",
+      tagIndex: "Індекс мітки",
+      itemsUnderTag: ({ count }) =>
+        count === 1 ? "1 елемент з цією міткою." : `Елементів з цією міткою: ${count}.`,
+      showingFirst: ({ count }) => `Показ перших ${count} міток.`,
+      totalTags: ({ count }) => `Всього знайдено міток: ${count}.`,
+>>>>>>> main
     },
   },
 } as const satisfies Translation

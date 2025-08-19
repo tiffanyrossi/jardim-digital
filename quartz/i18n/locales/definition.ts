@@ -31,12 +31,21 @@ export interface Translation {
       lightMode: string
       darkMode: string
     }
+<<<<<<< HEAD
+=======
+    readerMode: {
+      title: string
+    }
+>>>>>>> main
     explorer: {
       title: string
     }
     footer: {
       createdWith: string
+<<<<<<< HEAD
       credits: string
+=======
+>>>>>>> main
     }
     graph: {
       title: string
@@ -68,6 +77,10 @@ export interface Translation {
     error: {
       title: string
       notFound: string
+<<<<<<< HEAD
+=======
+      home: string
+>>>>>>> main
     }
     folderContent: {
       folder: string

@@ -29,6 +29,12 @@ export default {
       lightMode: "Világos mód",
       darkMode: "Sötét mód",
     },
+<<<<<<< HEAD
+=======
+    readerMode: {
+      title: "Olvasó mód",
+    },
+>>>>>>> main
     explorer: {
       title: "Fájlböngésző",
     },
@@ -65,6 +71,10 @@ export default {
     error: {
       title: "Nem található",
       notFound: "Ez a lap vagy privát vagy nem létezik.",
+<<<<<<< HEAD
+=======
+      home: "Vissza a kezdőlapra",
+>>>>>>> main
     },
     folderContent: {
       folder: "Mappa",

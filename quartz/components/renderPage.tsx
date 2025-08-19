@@ -3,7 +3,12 @@ import { QuartzComponent, QuartzComponentProps } from "./types"
 import HeaderConstructor from "./Header"
 import BodyConstructor from "./Body"
 import { JSResourceToScriptElement, StaticResources } from "../util/resources"
+<<<<<<< HEAD
 import { clone, FullSlug, RelativeURL, joinSegments, normalizeHastElement } from "../util/path"
+=======
+import { FullSlug, RelativeURL, joinSegments, normalizeHastElement } from "../util/path"
+import { clone } from "../util/clone"
+>>>>>>> main
 import { visit } from "unist-util-visit"
 import { Root, Element, ElementContent } from "hast"
 import { GlobalConfiguration } from "../cfg"
@@ -14,6 +19,10 @@ interface RenderComponents {
   header: QuartzComponent[]
   beforeBody: QuartzComponent[]
   pageBody: QuartzComponent
+<<<<<<< HEAD
+=======
+  afterBody: QuartzComponent[]
+>>>>>>> main
   left: QuartzComponent[]
   right: QuartzComponent[]
   footer: QuartzComponent
@@ -27,8 +36,18 @@ export function pageResources(
   const contentIndexPath = joinSegments(baseDir, "static/contentIndex.json")
   const contentIndexScript = `const fetchData = fetch("${contentIndexPath}").then(data => data.json())`
 
+<<<<<<< HEAD
   return {
     css: [joinSegments(baseDir, "index.css"), ...staticResources.css],
+=======
+  const resources: StaticResources = {
+    css: [
+      {
+        content: joinSegments(baseDir, "index.css"),
+      },
+      ...staticResources.css,
+    ],
+>>>>>>> main
     js: [
       {
         src: joinSegments(baseDir, "prescript.js"),
@@ -42,6 +61,7 @@ export function pageResources(
         script: contentIndexScript,
       },
       ...staticResources.js,
+<<<<<<< HEAD
       {
         src: joinSegments(baseDir, "postscript.js"),
         loadTime: "afterDOMReady",
@@ -63,13 +83,39 @@ export function renderPage(
   // for the file cached in contentMap in build.ts
   const root = clone(componentData.tree) as Root
 
+=======
+    ],
+    additionalHead: staticResources.additionalHead,
+  }
+
+  resources.js.push({
+    src: joinSegments(baseDir, "postscript.js"),
+    loadTime: "afterDOMReady",
+    moduleType: "module",
+    contentType: "external",
+  })
+
+  return resources
+}
+
+function renderTranscludes(
+  root: Root,
+  cfg: GlobalConfiguration,
+  slug: FullSlug,
+  componentData: QuartzComponentProps,
+) {
+>>>>>>> main
   // process transcludes in componentData
   visit(root, "element", (node, _index, _parent) => {
     if (node.tagName === "blockquote") {
       const classNames = (node.properties?.className ?? []) as string[]
       if (classNames.includes("transclude")) {
         const inner = node.children[0] as Element
+<<<<<<< HEAD
         const transcludeTarget = inner.properties["data-slug"] as FullSlug
+=======
+        const transcludeTarget = (inner.properties["data-slug"] ?? slug) as FullSlug
+>>>>>>> main
         const page = componentData.allFiles.find((f) => f.slug === transcludeTarget)
         if (!page) {
           return
@@ -178,6 +224,22 @@ export function renderPage(
       }
     }
   })
+<<<<<<< HEAD
+=======
+}
+
+export function renderPage(
+  cfg: GlobalConfiguration,
+  slug: FullSlug,
+  componentData: QuartzComponentProps,
+  components: RenderComponents,
+  pageResources: StaticResources,
+): string {
+  // make a deep copy of the tree so we don't remove the transclusion references
+  // for the file cached in contentMap in build.ts
+  const root = clone(componentData.tree) as Root
+  renderTranscludes(root, cfg, slug, componentData)
+>>>>>>> main
 
   // set componentData.tree to the edited html that has transclusions rendered
   componentData.tree = root
@@ -187,6 +249,10 @@ export function renderPage(
     header,
     beforeBody,
     pageBody: Content,
+<<<<<<< HEAD
+=======
+    afterBody,
+>>>>>>> main
     left,
     right,
     footer: Footer,
@@ -232,10 +298,23 @@ export function renderPage(
                 </div>
               </div>
               <Content {...componentData} />
+<<<<<<< HEAD
             </div>
             {RightComponent}
           </Body>
           <Footer {...componentData} />
+=======
+              <hr />
+              <div class="page-footer">
+                {afterBody.map((BodyComponent) => (
+                  <BodyComponent {...componentData} />
+                ))}
+              </div>
+            </div>
+            {RightComponent}
+            <Footer {...componentData} />
+          </Body>
+>>>>>>> main
         </div>
       </body>
       {pageResources.js

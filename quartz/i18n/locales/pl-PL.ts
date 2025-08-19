@@ -29,6 +29,12 @@ export default {
       lightMode: "Trzyb jasny",
       darkMode: "Tryb ciemny",
     },
+<<<<<<< HEAD
+=======
+    readerMode: {
+      title: "Tryb czytania",
+    },
+>>>>>>> main
     explorer: {
       title: "Przeglądaj",
     },
@@ -65,6 +71,10 @@ export default {
     error: {
       title: "Nie znaleziono",
       notFound: "Ta strona jest prywatna lub nie istnieje.",
+<<<<<<< HEAD
+=======
+      home: "Powrót do strony głównej",
+>>>>>>> main
     },
     folderContent: {
       folder: "Folder",

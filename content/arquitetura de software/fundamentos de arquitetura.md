@@ -1,10 +1,14 @@
-arquitetura de software é a estrutura fundamental de um sistema, servindo como um mapa em que a construção do sistema se baseia e se mantém. ela descreve decisões estratégicas que afetam a organização, o comportamento e a qualidade do sistema num geral, incluindo:
-
-- divisão em componentes
-- ferramentas de comunicação e integração entre os componentes
-- padrões e restrições de design
-- decisões de alto nível de tecnologia e frameworks
-
+---
+title:
+aliases:
+draft: "false"
+tags:
+  - tipos/🌱semente
+description:
+permalink:
+comments:
+enableToc:
+---
 a arquitetura de software é essencial para garantir que o sistema seja robusto, sustentável e alinhado aos objetivos do negócio. ao equilibrar decisões técnicas com requisitos funcionais e não-funcionais, ela assegura que o software possa evoluir com qualidade e eficiência ao longo do tempo.
 
 ## importância

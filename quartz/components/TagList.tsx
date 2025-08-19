@@ -1,15 +1,26 @@
+<<<<<<< HEAD
 import { pathToRoot, slugTag } from "../util/path"
+=======
+import { FullSlug, resolveRelative } from "../util/path"
+>>>>>>> main
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import { classNames } from "../util/lang"
 
 const TagList: QuartzComponent = ({ fileData, displayClass }: QuartzComponentProps) => {
   const tags = fileData.frontmatter?.tags
+<<<<<<< HEAD
   const baseDir = pathToRoot(fileData.slug!)
+=======
+>>>>>>> main
   if (tags && tags.length > 0) {
     return (
       <ul class={classNames(displayClass, "tags")}>
         {tags.map((tag) => {
+<<<<<<< HEAD
           const linkDest = baseDir + `/tags/${slugTag(tag)}`
+=======
+          const linkDest = resolveRelative(fileData.slug!, `tags/${tag}` as FullSlug)
+>>>>>>> main
           return (
             <li>
               <a href={linkDest} class="internal tag-link">
@@ -33,7 +44,10 @@ TagList.css = `
   gap: 0.4rem;
   margin: 1rem 0;
   flex-wrap: wrap;
+<<<<<<< HEAD
   justify-self: end;
+=======
+>>>>>>> main
 }
 
 .section-li > .section > .tags {

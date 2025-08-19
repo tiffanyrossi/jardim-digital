@@ -5,11 +5,19 @@ import { escapeHTML } from "../../util/escape"
 
 export interface Options {
   descriptionLength: number
+<<<<<<< HEAD
+=======
+  maxDescriptionLength: number
+>>>>>>> main
   replaceExternalLinks: boolean
 }
 
 const defaultOptions: Options = {
   descriptionLength: 150,
+<<<<<<< HEAD
+=======
+  maxDescriptionLength: 300,
+>>>>>>> main
   replaceExternalLinks: true,
 }
 
@@ -18,7 +26,11 @@ const urlRegex = new RegExp(
   "g",
 )
 
+<<<<<<< HEAD
 export const Description: QuartzTransformerPlugin<Partial<Options> | undefined> = (userOpts) => {
+=======
+export const Description: QuartzTransformerPlugin<Partial<Options>> = (userOpts) => {
+>>>>>>> main
   const opts = { ...defaultOptions, ...userOpts }
   return {
     name: "Description",
@@ -37,6 +49,7 @@ export const Description: QuartzTransformerPlugin<Partial<Options> | undefined> 
               text = text.replace(urlRegex, "$<domain>" + "$<path>")
             }
 
+<<<<<<< HEAD
             const desc = frontMatterDescription ?? text
             const sentences = desc.replace(/\s+/g, " ").split(/\.\s/)
             const finalDesc: string[] = []
@@ -66,6 +79,43 @@ export const Description: QuartzTransformerPlugin<Partial<Options> | undefined> 
             }
 
             file.data.description = finalDesc.join(" ")
+=======
+            if (frontMatterDescription) {
+              file.data.description = frontMatterDescription
+              file.data.text = text
+              return
+            }
+
+            // otherwise, use the text content
+            const desc = text
+            const sentences = desc.replace(/\s+/g, " ").split(/\.\s/)
+            let finalDesc = ""
+            let sentenceIdx = 0
+
+            // Add full sentences until we exceed the guideline length
+            while (sentenceIdx < sentences.length) {
+              const sentence = sentences[sentenceIdx]
+              if (!sentence) break
+
+              const currentSentence = sentence.endsWith(".") ? sentence : sentence + "."
+              const nextLength = finalDesc.length + currentSentence.length + (finalDesc ? 1 : 0)
+
+              // Add the sentence if we're under the guideline length
+              // or if this is the first sentence (always include at least one)
+              if (nextLength <= opts.descriptionLength || sentenceIdx === 0) {
+                finalDesc += (finalDesc ? " " : "") + currentSentence
+                sentenceIdx++
+              } else {
+                break
+              }
+            }
+
+            // truncate to max length if necessary
+            file.data.description =
+              finalDesc.length > opts.maxDescriptionLength
+                ? finalDesc.slice(0, opts.maxDescriptionLength) + "..."
+                : finalDesc
+>>>>>>> main
             file.data.text = text
           }
         },

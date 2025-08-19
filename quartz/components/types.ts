@@ -1,5 +1,9 @@
 import { ComponentType, JSX } from "preact"
+<<<<<<< HEAD
 import { StaticResources } from "../util/resources"
+=======
+import { StaticResources, StringResource } from "../util/resources"
+>>>>>>> main
 import { QuartzPluginData } from "../plugins/vfile"
 import { GlobalConfiguration } from "../cfg"
 import { Node } from "hast"
@@ -19,9 +23,15 @@ export type QuartzComponentProps = {
   }
 
 export type QuartzComponent = ComponentType<QuartzComponentProps> & {
+<<<<<<< HEAD
   css?: string
   beforeDOMLoaded?: string
   afterDOMLoaded?: string
+=======
+  css?: StringResource
+  beforeDOMLoaded?: StringResource
+  afterDOMLoaded?: StringResource
+>>>>>>> main
 }
 
 export type QuartzComponentConstructor<Options extends object | undefined = undefined> = (

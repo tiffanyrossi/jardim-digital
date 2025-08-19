@@ -29,6 +29,12 @@ export default {
       lightMode: "亮色模式",
       darkMode: "暗色模式",
     },
+<<<<<<< HEAD
+=======
+    readerMode: {
+      title: "阅读模式",
+    },
+>>>>>>> main
     explorer: {
       title: "探索",
     },
@@ -65,6 +71,10 @@ export default {
     error: {
       title: "无法找到",
       notFound: "私有笔记或笔记不存在。",
+<<<<<<< HEAD
+=======
+      home: "返回首页",
+>>>>>>> main
     },
     folderContent: {
       folder: "文件夹",

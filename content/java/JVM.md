@@ -1,3 +1,14 @@
+---
+title:
+aliases:
+draft: "false"
+tags:
+  - tipos/🌱semente
+  - java
+description:
+permalink:
+comments:
+---
 java virtual machine é uma máquina virtual poderosa, capaz de executar aplicações java de forma eficiente, portátil e segura.
 
 a JVM executa aplicações [[fundamentos de java|java]], transformando o [[bytecode]] em linguagem de máquina. é o componente que torna o lema "*escreva uma vez, rode em qualquer lugar*" possível, pois garante que um programa em java possa ser executado em diferentes sistemas operacionais. a JVM inspeciona o código antes da execução, garantindo que seja seguro e de acordo com os padrões da plataforma.

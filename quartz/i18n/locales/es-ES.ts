@@ -22,13 +22,24 @@ export default {
       quote: "Cita",
     },
     backlinks: {
+<<<<<<< HEAD
       title: "Enlaces de Retroceso",
       noBacklinksFound: "No se han encontrado enlaces traseros",
+=======
+      title: "Retroenlaces",
+      noBacklinksFound: "No se han encontrado retroenlaces",
+>>>>>>> main
     },
     themeToggle: {
       lightMode: "Modo claro",
       darkMode: "Modo oscuro",
     },
+<<<<<<< HEAD
+=======
+    readerMode: {
+      title: "Modo lector",
+    },
+>>>>>>> main
     explorer: {
       title: "Explorador",
     },
@@ -54,17 +65,30 @@ export default {
       title: "Tabla de Contenidos",
     },
     contentMeta: {
+<<<<<<< HEAD
       readingTime: ({ minutes }) => `${minutes} min read`,
+=======
+      readingTime: ({ minutes }) => `Se lee en ${minutes} min`,
+>>>>>>> main
     },
   },
   pages: {
     rss: {
       recentNotes: "Notas recientes",
+<<<<<<< HEAD
       lastFewNotes: ({ count }) => `Últimás ${count} notas`,
     },
     error: {
       title: "No se encontró.",
       notFound: "Esta página es privada o no existe.",
+=======
+      lastFewNotes: ({ count }) => `Últimas ${count} notas`,
+    },
+    error: {
+      title: "No se ha encontrado.",
+      notFound: "Esta página es privada o no existe.",
+      home: "Regresa a la página principal",
+>>>>>>> main
     },
     folderContent: {
       folder: "Carpeta",
@@ -77,7 +101,11 @@ export default {
       itemsUnderTag: ({ count }) =>
         count === 1 ? "1 artículo con esta etiqueta." : `${count} artículos con esta etiqueta.`,
       showingFirst: ({ count }) => `Mostrando las primeras ${count} etiquetas.`,
+<<<<<<< HEAD
       totalTags: ({ count }) => `Se encontraron ${count} etiquetas en total.`,
+=======
+      totalTags: ({ count }) => `Se han encontrado ${count} etiquetas en total.`,
+>>>>>>> main
     },
   },
 } as const satisfies Translation

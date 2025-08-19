@@ -29,6 +29,12 @@ export default {
       lightMode: "Tema chiaro",
       darkMode: "Tema scuro",
     },
+<<<<<<< HEAD
+=======
+    readerMode: {
+      title: "Modalità lettura",
+    },
+>>>>>>> main
     explorer: {
       title: "Esplora",
     },
@@ -65,6 +71,10 @@ export default {
     error: {
       title: "Non trovato",
       notFound: "Questa pagina è privata o non esiste.",
+<<<<<<< HEAD
+=======
+      home: "Ritorna alla home page",
+>>>>>>> main
     },
     folderContent: {
       folder: "Cartella",

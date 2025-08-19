@@ -1,3 +1,14 @@
+---
+title:
+aliases:
+draft: "false"
+tags:
+  - tipos/🌱semente
+  - docker
+description:
+permalink:
+comments:
+---
 o dockerfile é um arquivo de texto com instruções passo a passo para construir uma [[imagem docker]], definindo tudo que a imagem precisa: sistema operacional, dependências, arquivos, comandos e configurações.
 
 ## como funciona

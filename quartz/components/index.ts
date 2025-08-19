@@ -4,6 +4,10 @@ import FolderContent from "./pages/FolderContent"
 import NotFound from "./pages/404"
 import ArticleTitle from "./ArticleTitle"
 import Darkmode from "./Darkmode"
+<<<<<<< HEAD
+=======
+import ReaderMode from "./ReaderMode"
+>>>>>>> main
 import Head from "./Head"
 import PageTitle from "./PageTitle"
 import ContentMeta from "./ContentMeta"
@@ -19,7 +23,13 @@ import DesktopOnly from "./DesktopOnly"
 import MobileOnly from "./MobileOnly"
 import RecentNotes from "./RecentNotes"
 import Breadcrumbs from "./Breadcrumbs"
+<<<<<<< HEAD
 import Guestbook from "./Guestbook"
+=======
+import Comments from "./Comments"
+import Flex from "./Flex"
+import ConditionalRender from "./ConditionalRender"
+>>>>>>> main
 
 export {
   ArticleTitle,
@@ -27,6 +37,10 @@ export {
   TagContent,
   FolderContent,
   Darkmode,
+<<<<<<< HEAD
+=======
+  ReaderMode,
+>>>>>>> main
   Head,
   PageTitle,
   ContentMeta,
@@ -43,5 +57,11 @@ export {
   RecentNotes,
   NotFound,
   Breadcrumbs,
+<<<<<<< HEAD
   Guestbook,
+=======
+  Comments,
+  Flex,
+  ConditionalRender,
+>>>>>>> main
 }
