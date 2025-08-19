@@ -1,19 +1,11 @@
 import { promises } from "fs"
 import path from "path"
 import esbuild from "esbuild"
-<<<<<<< HEAD
-import chalk from "chalk"
-import { sassPlugin } from "esbuild-sass-plugin"
-import fs from "fs"
-import { intro, outro, select, text } from "@clack/prompts"
-import { rimraf } from "rimraf"
-=======
 import { styleText } from "util"
 import { sassPlugin } from "esbuild-sass-plugin"
 import fs from "fs"
 import { intro, outro, select, text } from "@clack/prompts"
 import { rm } from "fs/promises"
->>>>>>> main
 import chokidar from "chokidar"
 import prettyBytes from "pretty-bytes"
 import { execSync, spawnSync } from "child_process"
@@ -23,10 +15,7 @@ import { WebSocketServer } from "ws"
 import { randomUUID } from "crypto"
 import { Mutex } from "async-mutex"
 import { CreateArgv } from "./args.js"
-<<<<<<< HEAD
-=======
 import { globby } from "globby"
->>>>>>> main
 import {
   exitIfCancel,
   escapePath,
@@ -45,8 +34,6 @@ import {
 } from "./constants.js"
 
 /**
-<<<<<<< HEAD
-=======
  * Resolve content directory path
  * @param contentPath path to resolve
  */
@@ -56,42 +43,24 @@ function resolveContentPath(contentPath) {
 }
 
 /**
->>>>>>> main
  * Handles `npx quartz create`
  * @param {*} argv arguments for `create`
  */
 export async function handleCreate(argv) {
   console.log()
-<<<<<<< HEAD
-  intro(chalk.bgGreen.black(` Quartz v${version} `))
-  const contentFolder = path.join(cwd, argv.directory)
-=======
   intro(styleText(["bgGreen", "black"], ` Quartz v${version} `))
   const contentFolder = resolveContentPath(argv.directory)
->>>>>>> main
   let setupStrategy = argv.strategy?.toLowerCase()
   let linkResolutionStrategy = argv.links?.toLowerCase()
   const sourceDirectory = argv.source
 
-<<<<<<< HEAD
-  // If all cmd arguments were provided, check if theyre valid
-=======
   // If all cmd arguments were provided, check if they're valid
->>>>>>> main
   if (setupStrategy && linkResolutionStrategy) {
     // If setup isn't, "new", source argument is required
     if (setupStrategy !== "new") {
       // Error handling
       if (!sourceDirectory) {
         outro(
-<<<<<<< HEAD
-          chalk.red(
-            `Setup strategies (arg '${chalk.yellow(
-              `-${CreateArgv.strategy.alias[0]}`,
-            )}') other than '${chalk.yellow(
-              "new",
-            )}' require content folder argument ('${chalk.yellow(
-=======
           styleText(
             "red",
             `Setup strategies (arg '${styleText(
@@ -102,7 +71,6 @@ export async function handleCreate(argv) {
               "new",
             )}' require content folder argument ('${styleText(
               "yellow",
->>>>>>> main
               `-${CreateArgv.source.alias[0]}`,
             )}') to be set`,
           ),
@@ -111,37 +79,23 @@ export async function handleCreate(argv) {
       } else {
         if (!fs.existsSync(sourceDirectory)) {
           outro(
-<<<<<<< HEAD
-            chalk.red(
-              `Input directory to copy/symlink 'content' from not found ('${chalk.yellow(
-                sourceDirectory,
-              )}', invalid argument "${chalk.yellow(`-${CreateArgv.source.alias[0]}`)})`,
-=======
             styleText(
               "red",
               `Input directory to copy/symlink 'content' from not found ('${styleText(
                 "yellow",
                 sourceDirectory,
               )}', invalid argument "${styleText("yellow", `-${CreateArgv.source.alias[0]}`)})`,
->>>>>>> main
             ),
           )
           process.exit(1)
         } else if (!fs.lstatSync(sourceDirectory).isDirectory()) {
           outro(
-<<<<<<< HEAD
-            chalk.red(
-              `Source directory to copy/symlink 'content' from is not a directory (found file at '${chalk.yellow(
-                sourceDirectory,
-              )}', invalid argument ${chalk.yellow(`-${CreateArgv.source.alias[0]}`)}")`,
-=======
             styleText(
               "red",
               `Source directory to copy/symlink 'content' from is not a directory (found file at '${styleText(
                 "yellow",
                 sourceDirectory,
               )}', invalid argument ${styleText("yellow", `-${CreateArgv.source.alias[0]}`)}")`,
->>>>>>> main
             ),
           )
           process.exit(1)
@@ -173,11 +127,7 @@ export async function handleCreate(argv) {
     if (contentStat.isSymbolicLink()) {
       await fs.promises.unlink(contentFolder)
     } else {
-<<<<<<< HEAD
-      await rimraf(contentFolder)
-=======
       await rm(contentFolder, { recursive: true, force: true })
->>>>>>> main
     }
   }
 
