@@ -38,6 +38,7 @@ function coerceDate(fp: string, d: any): Date {
 }
 
 type MaybeDate = undefined | string | number
+<<<<<<< HEAD
 export const CreatedModifiedDate: QuartzTransformerPlugin<Partial<Options> | undefined> = (
   userOpts,
 ) => {

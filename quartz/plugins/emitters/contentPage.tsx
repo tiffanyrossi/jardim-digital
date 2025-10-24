@@ -53,13 +53,18 @@ export const ContentPage: QuartzEmitterPlugin<Partial<FullPageLayout>> = (userOp
     ...userOpts,
   }
 
+<<<<<<< HEAD
   const { head: Head, header, beforeBody, pageBody, left, right, footer: Footer } = opts
+=======
+  const { head: Head, header, beforeBody, pageBody, afterBody, left, right, footer: Footer } = opts
+>>>>>>> main
   const Header = HeaderConstructor()
   const Body = BodyConstructor()
 
   return {
     name: "ContentPage",
     getQuartzComponents() {
+<<<<<<< HEAD
       return [Head, Header, Body, ...header, ...beforeBody, pageBody, ...left, ...right, Footer]
     },
     async *emit(ctx, content, resources) {

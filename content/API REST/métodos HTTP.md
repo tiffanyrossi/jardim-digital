@@ -1,10 +1,11 @@
 ---
-"title:": 
-"alias:": 
+"title:":
+"alias:":
 "draft:": "false"
 tags:
   - API
   - "#HTTP"
+  - tipos/🪴planta
 "description:":
 ---
 ## POST

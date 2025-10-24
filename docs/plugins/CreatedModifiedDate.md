@@ -11,7 +11,13 @@ This plugin determines the created, modified, and published dates for a document
 
 This plugin accepts the following configuration options:
 
+<<<<<<< HEAD
 - `priority`: The data sources to consult for date information. Highest priority first. Possible values are `"frontmatter"`, `"git"`, and `"filesystem"`. Defaults to `"frontmatter", "git", "filesystem"]`.
+=======
+- `priority`: The data sources to consult for date information. Highest priority first. Possible values are `"frontmatter"`, `"git"`, and `"filesystem"`. Defaults to `["frontmatter", "git", "filesystem"]`.
+
+When loading the frontmatter, the value of [[Frontmatter#List]] is used.
+>>>>>>> main
 
 When loading the frontmatter, the value of [[Frontmatter#List]] is used.
 

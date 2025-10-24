@@ -15,6 +15,7 @@ const observer = new IntersectionObserver((entries) => {
 
 function toggleToc(this: HTMLElement) {
   this.classList.toggle("collapsed")
+<<<<<<< HEAD
   const content = this.nextElementSibling as HTMLElement | undefined
   if (!content) return
   content.classList.toggle("collapsed")

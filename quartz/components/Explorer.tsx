@@ -13,6 +13,34 @@ import { concatenateResources } from "../util/resources"
 const defaultOptions = {
   folderClickBehavior: "collapse",
   folderDefaultState: "open",
+=======
+import style from "./styles/explorer.scss"
+
+// @ts-ignore
+import script from "./scripts/explorer.inline"
+import { classNames } from "../util/lang"
+import { i18n } from "../i18n"
+import { FileTrieNode } from "../util/fileTrie"
+import OverflowListFactory from "./OverflowList"
+import { concatenateResources } from "../util/resources"
+
+type OrderEntries = "sort" | "filter" | "map"
+
+export interface Options {
+  title?: string
+  folderDefaultState: "collapsed" | "open"
+  folderClickBehavior: "collapse" | "link"
+  useSavedState: boolean
+  sortFn: (a: FileTrieNode, b: FileTrieNode) => number
+  filterFn: (node: FileTrieNode) => boolean
+  mapFn: (node: FileTrieNode) => void
+  order: OrderEntries[]
+}
+
+const defaultOptions: Options = {
+  folderDefaultState: "collapsed",
+  folderClickBehavior: "link",
+>>>>>>> main
   useSavedState: true,
   mapFn: (node) => {
     return node

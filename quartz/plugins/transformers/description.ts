@@ -20,7 +20,11 @@ const urlRegex = new RegExp(
   "g",
 )
 
+<<<<<<< HEAD
 export const Description: QuartzTransformerPlugin<Partial<Options> | undefined> = (userOpts) => {
+=======
+export const Description: QuartzTransformerPlugin<Partial<Options>> = (userOpts) => {
+>>>>>>> main
   const opts = { ...defaultOptions, ...userOpts }
   return {
     name: "Description",

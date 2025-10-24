@@ -27,6 +27,45 @@ function toggleExplorer(this: HTMLElement) {
 
   content.classList.toggle("collapsed")
   content.style.maxHeight = content.style.maxHeight === "0px" ? content.scrollHeight + "px" : "0px"
+=======
+import { FileTrieNode } from "../../util/fileTrie"
+import { FullSlug, resolveRelative, simplifySlug } from "../../util/path"
+import { ContentDetails } from "../../plugins/emitters/contentIndex"
+
+type MaybeHTMLElement = HTMLElement | undefined
+
+interface ParsedOptions {
+  folderClickBehavior: "collapse" | "link"
+  folderDefaultState: "collapsed" | "open"
+  useSavedState: boolean
+  sortFn: (a: FileTrieNode, b: FileTrieNode) => number
+  filterFn: (node: FileTrieNode) => boolean
+  mapFn: (node: FileTrieNode) => void
+  order: "sort" | "filter" | "map"[]
+}
+
+type FolderState = {
+  path: string
+  collapsed: boolean
+}
+
+let currentExplorerState: Array<FolderState>
+function toggleExplorer(this: HTMLElement) {
+  const nearestExplorer = this.closest(".explorer") as HTMLElement
+  if (!nearestExplorer) return
+  const explorerCollapsed = nearestExplorer.classList.toggle("collapsed")
+  nearestExplorer.setAttribute(
+    "aria-expanded",
+    nearestExplorer.getAttribute("aria-expanded") === "true" ? "false" : "true",
+  )
+
+  if (!explorerCollapsed) {
+    // Stop <html> from being scrollable when mobile explorer is open
+    document.documentElement.classList.add("mobile-no-scroll")
+  } else {
+    document.documentElement.classList.remove("mobile-no-scroll")
+  }
+>>>>>>> main
 }
 
 function toggleFolder(evt: MouseEvent) {

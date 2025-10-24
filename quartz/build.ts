@@ -186,6 +186,20 @@ async function rebuild(changes: ChangeEvent[], clientRefresh: () => void, buildD
   buildData.lastBuildMs = buildStart
   const release = await mut.acquire()
   if (buildData.lastBuildMs > buildStart) {
+=======
+async function rebuild(changes: ChangeEvent[], clientRefresh: () => void, buildData: BuildData) {
+  const { ctx, contentMap, mut, changesSinceLastBuild } = buildData
+  const { argv, cfg } = ctx
+
+  const buildId = randomIdNonSecure()
+  ctx.buildId = buildId
+  buildData.lastBuildMs = new Date().getTime()
+  const numChangesInBuild = changes.length
+  const release = await mut.acquire()
+
+  // if there's another build after us, release and let them do it
+  if (ctx.buildId !== buildId) {
+>>>>>>> main
     release()
     return
   }
@@ -290,6 +304,7 @@ async function rebuild(changes: ChangeEvent[], clientRefresh: () => void, buildD
   }
 
   console.log(`Emitted ${emittedFiles} files to \`${argv.output}\` in ${perf.timeSince("rebuild")}`)
+<<<<<<< HEAD
 
   // CLEANUP
   const destinationsToDelete = new Set<FilePath>()
@@ -402,6 +417,12 @@ async function rebuildFromEntrypoint(
   clientRefresh()
   toRebuild.clear()
   toRemove.clear()
+=======
+  console.log(styleText("green", `Done rebuilding in ${perf.timeSince()}`))
+  changes.splice(0, numChangesInBuild)
+  clientRefresh()
+  release()
+>>>>>>> main
 }
 
 export default async (argv: Argv, mut: Mutex, clientRefresh: () => void) => {

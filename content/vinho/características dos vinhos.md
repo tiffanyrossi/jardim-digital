@@ -1,10 +1,11 @@
 ---
-"title:": 
-"alias:": 
+"title:":
+"alias:":
 "draft:": "false"
 tags:
   - vinho
-"description:": 
+  - tipos/🧺vaso
+"description:":
 tipo: semente
 ---
 vinho é uma bebida alcoólica, feita a partir da fermentação de [[tipos de uva|uvas]]. 

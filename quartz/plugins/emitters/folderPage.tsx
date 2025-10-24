@@ -3,6 +3,7 @@ import { QuartzComponentProps } from "../../components/types"
 import HeaderConstructor from "../../components/Header"
 import BodyConstructor from "../../components/Body"
 import { pageResources, renderPage } from "../../components/renderPage"
+<<<<<<< HEAD
 import { ProcessedContent, defaultProcessedContent } from "../vfile"
 import { FullPageLayout } from "../../cfg"
 import path from "path"
@@ -17,6 +18,7 @@ import {
 import { defaultListPageLayout, sharedPageComponents } from "../../../quartz.layout"
 import { FolderContent } from "../../components"
 import { write } from "./helpers"
+<<<<<<< HEAD
 import { i18n } from "../../i18n"
 import DepGraph from "../../depgraph"
 
@@ -29,12 +31,107 @@ export const FolderPage: QuartzEmitterPlugin<Partial<FullPageLayout>> = (userOpt
   }
 
   const { head: Head, header, beforeBody, pageBody, left, right, footer: Footer } = opts
+=======
+import { i18n, TRANSLATIONS } from "../../i18n"
+import { BuildCtx } from "../../util/ctx"
+import { StaticResources } from "../../util/resources"
+interface FolderPageOptions extends FullPageLayout {
+  sort?: (f1: QuartzPluginData, f2: QuartzPluginData) => number
+}
+
+async function* processFolderInfo(
+  ctx: BuildCtx,
+  folderInfo: Record<SimpleSlug, ProcessedContent>,
+  allFiles: QuartzPluginData[],
+  opts: FullPageLayout,
+  resources: StaticResources,
+) {
+  for (const [folder, folderContent] of Object.entries(folderInfo) as [
+    SimpleSlug,
+    ProcessedContent,
+  ][]) {
+    const slug = joinSegments(folder, "index") as FullSlug
+    const [tree, file] = folderContent
+    const cfg = ctx.cfg.configuration
+    const externalResources = pageResources(pathToRoot(slug), resources)
+    const componentData: QuartzComponentProps = {
+      ctx,
+      fileData: file.data,
+      externalResources,
+      cfg,
+      children: [],
+      tree,
+      allFiles,
+    }
+
+    const content = renderPage(cfg, slug, componentData, opts, externalResources)
+    yield write({
+      ctx,
+      content,
+      slug,
+      ext: ".html",
+    })
+  }
+}
+
+function computeFolderInfo(
+  folders: Set<SimpleSlug>,
+  content: ProcessedContent[],
+  locale: keyof typeof TRANSLATIONS,
+): Record<SimpleSlug, ProcessedContent> {
+  // Create default folder descriptions
+  const folderInfo: Record<SimpleSlug, ProcessedContent> = Object.fromEntries(
+    [...folders].map((folder) => [
+      folder,
+      defaultProcessedContent({
+        slug: joinSegments(folder, "index") as FullSlug,
+        frontmatter: {
+          title: `${i18n(locale).pages.folderContent.folder}: ${folder}`,
+          tags: [],
+        },
+      }),
+    ]),
+  )
+
+  // Update with actual content if available
+  for (const [tree, file] of content) {
+    const slug = stripSlashes(simplifySlug(file.data.slug!)) as SimpleSlug
+    if (folders.has(slug)) {
+      folderInfo[slug] = [tree, file]
+    }
+  }
+
+  return folderInfo
+}
+
+function _getFolders(slug: FullSlug): SimpleSlug[] {
+  var folderName = path.dirname(slug ?? "") as SimpleSlug
+  const parentFolderNames = [folderName]
+
+  while (folderName !== ".") {
+    folderName = path.dirname(folderName ?? "") as SimpleSlug
+    parentFolderNames.push(folderName)
+  }
+  return parentFolderNames
+}
+
+export const FolderPage: QuartzEmitterPlugin<Partial<FolderPageOptions>> = (userOpts) => {
+  const opts: FullPageLayout = {
+    ...sharedPageComponents,
+    ...defaultListPageLayout,
+    pageBody: FolderContent({ sort: userOpts?.sort }),
+    ...userOpts,
+  }
+
+  const { head: Head, header, beforeBody, pageBody, afterBody, left, right, footer: Footer } = opts
+>>>>>>> main
   const Header = HeaderConstructor()
   const Body = BodyConstructor()
 
   return {
     name: "FolderPage",
     getQuartzComponents() {
+<<<<<<< HEAD
       return [Head, Header, Body, ...header, ...beforeBody, pageBody, ...left, ...right, Footer]
     },
     async *emit(ctx, content, resources) {
@@ -43,6 +140,7 @@ export const FolderPage: QuartzEmitterPlugin<Partial<FullPageLayout>> = (userOpt
 
       const folders: Set<SimpleSlug> = new Set(
         allFiles.flatMap((data) => {
+<<<<<<< HEAD
           const slug = data.slug
           const folderName = path.dirname(slug ?? "") as SimpleSlug
           if (slug && folderName !== "." && folderName !== "tags") {

@@ -68,6 +68,10 @@ export default {
     error: {
       title: "Non trovato",
       notFound: "Questa pagina è privata o non esiste.",
+<<<<<<< HEAD
+=======
+      home: "Ritorna alla home page",
+>>>>>>> main
     },
     folderContent: {
       folder: "Cartella",

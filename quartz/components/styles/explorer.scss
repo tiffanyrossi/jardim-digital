@@ -1,7 +1,102 @@
 @use "../../styles/variables.scss" as *;
 
+<<<<<<< HEAD
 button#explorer {
   all: unset;
+=======
+@media all and ($mobile) {
+  .page > #quartz-body {
+    // Shift page position when toggling Explorer on mobile.
+    & > :not(.sidebar.left:has(.explorer)) {
+      transition: transform 300ms ease-in-out;
+    }
+    &.lock-scroll > :not(.sidebar.left:has(.explorer)) {
+      transform: translateX(100dvw);
+      transition: transform 300ms ease-in-out;
+    }
+
+    // Sticky top bar (stays in place when scrolling down on mobile).
+    .sidebar.left:has(.explorer) {
+      box-sizing: border-box;
+      position: sticky;
+      background-color: var(--light);
+      padding: 1rem 0 1rem 0;
+      margin: 0;
+    }
+
+    .hide-until-loaded ~ .explorer-content {
+      display: none;
+    }
+  }
+}
+
+.explorer {
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+
+  min-height: 1.2rem;
+  flex: 0 1 auto;
+  &.collapsed {
+    flex: 0 1 1.2rem;
+    & .fold {
+      transform: rotateZ(-90deg);
+    }
+  }
+
+  & .fold {
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+    opacity: 0.8;
+  }
+
+  @media all and ($mobile) {
+    order: -1;
+    height: initial;
+    overflow: hidden;
+    flex-shrink: 0;
+    align-self: flex-start;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  button.mobile-explorer {
+    display: none;
+  }
+
+  button.desktop-explorer {
+    display: flex;
+  }
+
+  @media all and ($mobile) {
+    button.mobile-explorer {
+      display: flex;
+    }
+
+    button.desktop-explorer {
+      display: none;
+    }
+  }
+
+  &.desktop-only {
+    @media all and not ($mobile) {
+      display: flex;
+    }
+  }
+
+  svg {
+    pointer-events: all;
+    transition: transform 0.35s ease;
+
+    & > polyline {
+      pointer-events: none;
+    }
+  }
+}
+
+button.mobile-explorer,
+button.desktop-explorer {
+>>>>>>> main
   background-color: transparent;
   border: none;
   text-align: left;
@@ -11,6 +106,7 @@ button#explorer {
   display: flex;
   align-items: center;
 
+<<<<<<< HEAD
   & h1 {
     font-size: 0.8rem;
     display: inline-block;
@@ -69,7 +165,11 @@ button#explorer {
   & div > a {
     color: var(--secondary);
     font-family: var(--headerFont);
+<<<<<<< HEAD
     font-size: 0.6rem;
+=======
+    font-size: 0.95rem;
+>>>>>>> main
     font-weight: $semiBoldWeight;
     line-height: 1.5rem;
     display: inline-block;

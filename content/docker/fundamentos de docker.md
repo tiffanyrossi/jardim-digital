@@ -1,3 +1,14 @@
+---
+title:
+aliases:
+draft: "false"
+tags:
+  - "#tipos/🌱semente"
+  - docker
+description:
+permalink:
+comments:
+---
 ## conceitos iniciais
 docker é uma **plataforma de virtualização**, que usa conceito de **containers** para realizar empacotamento e execução de aplicações. o container leva o ambiente local para qualquer lugar, de forma leve, rápida e isolada do resto do sistema. diferente das máquinas virtuais, que têm o próprio sistema operacional complexo e consomem um número maior de recursos, os containers compartilham o sistema operacional do host.
 

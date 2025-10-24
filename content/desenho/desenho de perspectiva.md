@@ -1,10 +1,10 @@
 ---
-"title:": 
-"alias:": 
+"title:":
+"alias:":
 "draft:": "false"
-tags: 
-"description:": 
-tipo: vaso
+tags:
+  - tipos/🧺vaso
+"description:":
 ---
 
 >[!note] 

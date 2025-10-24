@@ -15,6 +15,10 @@ interface RenderComponents {
   header: QuartzComponent[]
   beforeBody: QuartzComponent[]
   pageBody: QuartzComponent
+<<<<<<< HEAD
+=======
+  afterBody: QuartzComponent[]
+>>>>>>> main
   left: QuartzComponent[]
   right: QuartzComponent[]
   footer: QuartzComponent
@@ -28,8 +32,18 @@ export function pageResources(
   const contentIndexPath = joinSegments(baseDir, "static/contentIndex.json")
   const contentIndexScript = `const fetchData = fetch("${contentIndexPath}").then(data => data.json())`
 
+<<<<<<< HEAD
   return {
     css: [joinSegments(baseDir, "index.css"), ...staticResources.css],
+=======
+  const resources: StaticResources = {
+    css: [
+      {
+        content: joinSegments(baseDir, "index.css"),
+      },
+      ...staticResources.css,
+    ],
+>>>>>>> main
     js: [
       {
         src: joinSegments(baseDir, "prescript.js"),
@@ -200,6 +214,10 @@ export function renderPage(
     header,
     beforeBody,
     pageBody: Content,
+<<<<<<< HEAD
+=======
+    afterBody,
+>>>>>>> main
     left,
     right,
     footer: Footer,
@@ -245,10 +263,23 @@ export function renderPage(
                 </div>
               </div>
               <Content {...componentData} />
+<<<<<<< HEAD
             </div>
             {RightComponent}
           </Body>
           <Footer {...componentData} />
+=======
+              <hr />
+              <div class="page-footer">
+                {afterBody.map((BodyComponent) => (
+                  <BodyComponent {...componentData} />
+                ))}
+              </div>
+            </div>
+            {RightComponent}
+            <Footer {...componentData} />
+          </Body>
+>>>>>>> main
         </div>
       </body>
       {pageResources.js

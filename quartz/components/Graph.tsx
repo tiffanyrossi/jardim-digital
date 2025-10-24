@@ -67,6 +67,7 @@ export default ((opts?: Partial<GraphOptions>) => {
       <div class={classNames(displayClass, "graph")}>
         <h3>{i18n(cfg.locale).components.graph.title}</h3>
         <div class="graph-outer">
+<<<<<<< HEAD
           <div id="graph-container" data-cfg={JSON.stringify(localGraph)}></div>
           <svg
             version="1.1"

@@ -2,6 +2,7 @@
 draft: true
 ---
 
+<<<<<<< HEAD
 ## high priority backlog
 
 - static dead link detection
@@ -21,3 +22,13 @@ draft: true
 - Canvas
 - parse all images in page: use this for page lists if applicable?
 - CV mode? with print stylesheet
+=======
+## misc backlog
+
+- static dead link detection
+- cursor chat extension
+- sidenotes? https://github.com/capnfabs/paperesque
+- direct match in search using double quotes
+- https://help.obsidian.md/Advanced+topics/Using+Obsidian+URI
+- Canvas
+>>>>>>> main

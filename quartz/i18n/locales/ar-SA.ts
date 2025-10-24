@@ -73,6 +73,10 @@ export default {
     error: {
       title: "غير موجود",
       notFound: "إما أن هذه الصفحة خاصة أو غير موجودة.",
+<<<<<<< HEAD
+=======
+      home: "العوده للصفحة الرئيسية",
+>>>>>>> main
     },
     folderContent: {
       folder: "مجلد",

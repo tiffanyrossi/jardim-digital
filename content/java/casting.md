@@ -1,8 +1,9 @@
 ---
-"title:": 
-"alias:": 
+"title:":
+"alias:":
 "draft:": "true"
-tags: 
+tags:
+  - tipos/🧺vaso
 "description:":
 ---
 >[!note] 

@@ -17,6 +17,15 @@ export type JSResource = {
     }
 )
 
+<<<<<<< HEAD
+=======
+export type CSSResource = {
+  content: string
+  inline?: boolean
+  spaPreserve?: boolean
+}
+
+>>>>>>> main
 export function JSResourceToScriptElement(resource: JSResource, preserve?: boolean): JSX.Element {
   const scriptType = resource.moduleType ?? "application/javascript"
   const spaPreserve = preserve ?? resource.spaPreserve
@@ -37,6 +46,7 @@ export function JSResourceToScriptElement(resource: JSResource, preserve?: boole
   }
 }
 
+<<<<<<< HEAD
 export interface StaticResources {
   css: string[]
   js: JSResource[]

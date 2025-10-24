@@ -12,15 +12,20 @@ export interface FullPageLayout {
   header: QuartzComponent[] // laid out horizontally
   beforeBody: QuartzComponent[] // laid out vertically
   pageBody: QuartzComponent // single component
-  left: QuartzComponent[] // vertical on desktop, horizontal on mobile
-  right: QuartzComponent[] // vertical on desktop, horizontal on mobile
+  afterBody: QuartzComponent[] // laid out vertically
+  left: QuartzComponent[] // vertical on desktop and tablet, horizontal on mobile
+  right: QuartzComponent[] // vertical on desktop, horizontal on tablet and mobile
   footer: QuartzComponent // single component
 }
 ```
 
 These correspond to following parts of the page:
 
-![[quartz layout.png|800]]
+| Layout                          | Preview                             |
+| ------------------------------- | ----------------------------------- |
+| Desktop (width > 1200px)        | ![[quartz-layout-desktop.png\|800]] |
+| Tablet (800px < width < 1200px) | ![[quartz-layout-tablet.png\|800]]  |
+| Mobile (width < 800px)          | ![[quartz-layout-mobile.png\|800]]  |
 
 > [!note]
 > There are two additional layout fields that are _not_ shown in the above diagram.

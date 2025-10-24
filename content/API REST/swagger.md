@@ -1,10 +1,11 @@
 ---
-"title:": 
-"alias:": 
+"title:":
+"alias:":
 "draft:": "false"
 tags:
   - API
   - "#documentação"
+  - tipos/🪴planta
 "description:":
 ---
 um dos frameworks mais utilizados para documentação de [[fundamentos de API REST|API REST]], permite ao cliente que irá consumir a API conhecer seus [[fundamentos de API REST#endpoint|endpoints]], recursos, modelos, [[fundamentos de API REST#request|request]] e [[fundamentos de API REST#response|responses]], entre outros detalhes. atualmente, é um padrão de documentação amplamente aceito, especialmente com a iniciativa [OpenAPI](https://swagger.io/specification/).

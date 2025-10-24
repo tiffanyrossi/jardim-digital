@@ -68,6 +68,10 @@ export default {
     error: {
       title: "Not Found",
       notFound: "ページが存在しないか、非公開設定になっています。",
+<<<<<<< HEAD
+=======
+      home: "ホームページに戻る",
+>>>>>>> main
     },
     folderContent: {
       folder: "フォルダ",

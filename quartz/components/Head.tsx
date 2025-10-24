@@ -1,4 +1,5 @@
 import { i18n } from "../i18n"
+<<<<<<< HEAD
 import { FullSlug, joinSegments, pathToRoot } from "../util/path"
 import { JSResourceToScriptElement } from "../util/resources"
 import { googleFontHref } from "../util/theme"
@@ -10,6 +11,30 @@ export default (() => {
     const description =
       fileData.description?.trim() ?? i18n(cfg.locale).propertyDefaults.description
     const { css, js } = externalResources
+=======
+import { FullSlug, getFileExtension, joinSegments, pathToRoot } from "../util/path"
+import { CSSResourceToStyleElement, JSResourceToScriptElement } from "../util/resources"
+import { googleFontHref, googleFontSubsetHref } from "../util/theme"
+import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
+import { unescapeHTML } from "../util/escape"
+import { CustomOgImagesEmitterName } from "../plugins/emitters/ogImage"
+export default (() => {
+  const Head: QuartzComponent = ({
+    cfg,
+    fileData,
+    externalResources,
+    ctx,
+  }: QuartzComponentProps) => {
+    const titleSuffix = cfg.pageTitleSuffix ?? ""
+    const title =
+      (fileData.frontmatter?.title ?? i18n(cfg.locale).propertyDefaults.title) + titleSuffix
+    const description =
+      fileData.frontmatter?.socialDescription ??
+      fileData.frontmatter?.description ??
+      unescapeHTML(fileData.description?.trim() ?? i18n(cfg.locale).propertyDefaults.description)
+
+    const { css, js, additionalHead } = externalResources
+>>>>>>> main
 
     const url = new URL(`https://${cfg.baseUrl ?? "example.com"}`)
     const path = url.pathname as FullSlug
@@ -25,6 +50,22 @@ export default (() => {
     return (
       <head>
         <title>{title} | wiki.tiffs.dev</title>
+=======
+    const iconPath = joinSegments(baseDir, "static/icon.png")
+
+    // Url of current page
+    const socialUrl =
+      fileData.slug === "404" ? url.toString() : joinSegments(url.toString(), fileData.slug!)
+
+    const usesCustomOgImage = ctx.cfg.plugins.emitters.some(
+      (e) => e.name === CustomOgImagesEmitterName,
+    )
+    const ogImageDefaultPath = `https://${cfg.baseUrl}/static/og-image.png`
+
+    return (
+      <head>
+        <title>{title}</title>
+>>>>>>> main
         <meta charSet="utf-8" />
         {cfg.theme.cdnCaching && cfg.theme.fontOrigin === "googleFonts" && (
           <>

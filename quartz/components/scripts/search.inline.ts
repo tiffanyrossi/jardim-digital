@@ -143,6 +143,7 @@ function highlightHTML(searchTerm: string, el: HTMLElement) {
   return html.body
 }
 
+<<<<<<< HEAD
 document.addEventListener("nav", async (e: CustomEventMap["nav"]) => {
   const currentSlug = e.detail.url
   const data = await fetchData
@@ -175,6 +176,7 @@ document.addEventListener("nav", async (e: CustomEventMap["nav"]) => {
   }
 
   function hideSearch() {
+<<<<<<< HEAD
     container?.classList.remove("active")
     if (searchBar) {
       searchBar.value = "" // clear the input when we dismiss the search
@@ -190,6 +192,18 @@ document.addEventListener("nav", async (e: CustomEventMap["nav"]) => {
     }
     searchLayout.classList.remove("display-results")
     searchType = "basic" // reset search type after closing
+=======
+    container.classList.remove("active")
+    searchBar.value = "" // clear the input when we dismiss the search
+    if (sidebar) sidebar.style.zIndex = ""
+    removeAllChildren(results)
+    if (preview) {
+      removeAllChildren(preview)
+    }
+    searchLayout.classList.remove("display-results")
+    searchType = "basic" // reset search type after closing
+    searchButton.focus()
+>>>>>>> main
   }
 
   function showSearch(searchTypeNew: SearchType) {
@@ -454,6 +468,7 @@ document.addEventListener("nav", async (e: CustomEventMap["nav"]) => {
 
   document.addEventListener("keydown", shortcutHandler)
   window.addCleanup(() => document.removeEventListener("keydown", shortcutHandler))
+<<<<<<< HEAD
   searchIcon?.addEventListener("click", () => showSearch("basic"))
   window.addCleanup(() => searchIcon?.removeEventListener("click", () => showSearch("basic")))
   searchBar?.addEventListener("input", onType)

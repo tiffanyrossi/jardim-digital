@@ -572,6 +572,7 @@ export async function handleSync(argv) {
       return
     }
   }
+}
 
   console.log(styleText("green", "Done!"))
 }

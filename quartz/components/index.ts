@@ -20,7 +20,13 @@ import DesktopOnly from "./DesktopOnly"
 import MobileOnly from "./MobileOnly"
 import RecentNotes from "./RecentNotes"
 import Breadcrumbs from "./Breadcrumbs"
+<<<<<<< HEAD
 import Guestbook from "./Guestbook"
+=======
+import Comments from "./Comments"
+import Flex from "./Flex"
+import ConditionalRender from "./ConditionalRender"
+>>>>>>> main
 
 export {
   ArticleTitle,
@@ -45,5 +51,11 @@ export {
   RecentNotes,
   NotFound,
   Breadcrumbs,
+<<<<<<< HEAD
   Guestbook,
+=======
+  Comments,
+  Flex,
+  ConditionalRender,
+>>>>>>> main
 }

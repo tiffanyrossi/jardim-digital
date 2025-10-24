@@ -129,11 +129,11 @@ export default (() => {
     return <button id="btn">Click me</button>
   }
 
-  YourComponent.beforeDOM = `
+  YourComponent.beforeDOMLoaded = `
   console.log("hello from before the page loads!")
   `
 
-  YourComponent.afterDOM = `
+  YourComponent.afterDOMLoaded = `
   document.getElementById('btn').onclick = () => {
     alert('button clicked!')
   }
@@ -192,7 +192,7 @@ export default (() => {
     return <button id="btn">Click me</button>
   }
 
-  YourComponent.afterDOM = script
+  YourComponent.afterDOMLoaded = script
   return YourComponent
 }) satisfies QuartzComponentConstructor
 ```
@@ -226,9 +226,11 @@ Then, you can use it like any other component in `quartz.layout.ts` via `Compone
 As Quartz components are just functions that return React components, you can compositionally use them in other Quartz components.
 
 ```tsx title="quartz/components/AnotherComponent.tsx"
-import YourComponent from "./YourComponent"
+import YourComponentConstructor from "./YourComponent"
 
 export default (() => {
+  const YourComponent = YourComponentConstructor()
+
   function AnotherComponent(props: QuartzComponentProps) {
     return (
       <div>

@@ -69,6 +69,10 @@ export default {
     error: {
       title: "Niet gevonden",
       notFound: "Deze pagina is niet zichtbaar of bestaat niet.",
+<<<<<<< HEAD
+=======
+      home: "Keer terug naar de start pagina",
+>>>>>>> main
     },
     folderContent: {
       folder: "Map",

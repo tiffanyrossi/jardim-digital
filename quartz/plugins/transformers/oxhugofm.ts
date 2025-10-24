@@ -47,9 +47,13 @@ const quartzLatexRegex = new RegExp(/\$\$[\s\S]*?\$\$|\$.*?\$/, "g")
  * markdown to make it compatible with quartz but the list of changes applied it
  * is not exhaustive.
  * */
+<<<<<<< HEAD
 export const OxHugoFlavouredMarkdown: QuartzTransformerPlugin<Partial<Options> | undefined> = (
   userOpts,
 ) => {
+=======
+export const OxHugoFlavouredMarkdown: QuartzTransformerPlugin<Partial<Options>> = (userOpts) => {
+>>>>>>> main
   const opts = { ...defaultOptions, ...userOpts }
   return {
     name: "OxHugoFlavouredMarkdown",

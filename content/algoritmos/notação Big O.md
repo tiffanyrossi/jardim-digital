@@ -2,6 +2,7 @@
 "title:": notação big O
 "draft:": "false"
 tags:
+  - tipos/🪴planta
   - algoritmos
 "description:":
 ---

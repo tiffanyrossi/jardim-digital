@@ -3,6 +3,7 @@
 "alias:":
 "draft:": "false"
 tags:
+  - tipos/🪴planta
   - meta
 "description:":
 ---

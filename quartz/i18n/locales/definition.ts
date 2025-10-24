@@ -39,7 +39,10 @@ export interface Translation {
     }
     footer: {
       createdWith: string
+<<<<<<< HEAD
       credits: string
+=======
+>>>>>>> main
     }
     graph: {
       title: string
@@ -71,6 +74,10 @@ export interface Translation {
     error: {
       title: string
       notFound: string
+<<<<<<< HEAD
+=======
+      home: string
+>>>>>>> main
     }
     folderContent: {
       folder: string

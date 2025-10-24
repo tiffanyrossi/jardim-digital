@@ -5,12 +5,20 @@ import * as Component from "./quartz/components"
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
+<<<<<<< HEAD
   footer: Component.Footer({
     links: {
       "sobre": "/_o-que-é-isso",
       "blog": "https://tiffs.dev",
       "fediverso": "https://brejo.us/@tiffs",
       "rss": "https://wiki.tiffs.dev/index.xml"
+=======
+  afterBody: [],
+  footer: Component.Footer({
+    links: {
+      "fediverso": "https://bolha.one/@tiffs",
+      "blog": "https://tiffs.dev",
+>>>>>>> main
     },
   }),
 }
@@ -27,6 +35,15 @@ export const defaultContentPageLayout: PageLayout = {
     Component.TagList(),
     // Component.Guestbook(),
 
+=======
+    Component.ConditionalRender({
+      component: Component.Breadcrumbs(),
+      condition: (page) => page.fileData.slug !== "index",
+    }),
+    Component.ArticleTitle(),
+    Component.ContentMeta(),
+    Component.TagList(),
+>>>>>>> main
   ],
   left: [
     Component.PageTitle(),
@@ -72,6 +89,22 @@ export const defaultContentPageLayout: PageLayout = {
         showTags: true, // whether to show tags in the graph
       },}
     ),
+=======
+    Component.Flex({
+      components: [
+        {
+          Component: Component.Search(),
+          grow: true,
+        },
+        { Component: Component.Darkmode() },
+        { Component: Component.ReaderMode() },
+      ],
+    }),
+    Component.Explorer(),
+  ],
+  right: [
+    Component.Graph(),
+>>>>>>> main
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],
