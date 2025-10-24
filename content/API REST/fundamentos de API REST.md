@@ -1,9 +1,10 @@
 ---
 "title:": fundamentos de API REST
-"alias:": 
+"alias:":
 "draft:": "false"
 tags:
   - API
+  - "#REST"
 "description:":
 ---
 APIs, ou **a**pp **p**rogramming **i**nterfaces, representam aplicações cliente-servidor que facilitam a  a comunicação entre serviços, sejam eles internos ou externos, sem exigir o conhecimento detalhado de suas implementações. garantem um ambiente seguro ao controlar o acesso às informações, expondo apenas o necessário para o serviço específico em questão.

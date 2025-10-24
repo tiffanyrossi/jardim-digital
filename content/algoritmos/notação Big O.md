@@ -1,10 +1,9 @@
 ---
-"title:": " notação big O"
+"title:": notação big O
 "draft:": "false"
 tags:
   - algoritmos
-"description:": 
-tipo: 🪴
+"description:":
 ---
 a notação big O é uma notação que determina a rapidez de um algoritmo.
 

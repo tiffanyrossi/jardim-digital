@@ -1,10 +1,9 @@
 ---
 "title:": 🌱 indieweb
-"alias:": 
+"alias:":
 "draft:": "false"
-tags: 
-"description:": 
-tipo: vaso
+tags:
+"description:":
 ---
 
 > [!quote] indieweb
@@ -13,6 +12,9 @@ tipo: vaso
 > — [IndieWeb](https://indieweb.org/)
 
 ## big tech vs indieweb
-a
+
+>[!note] 
+> página em construção - em breve vou plantar uma  [[_o que é isso#🌱semente|🌱semente]] por aqui :)
+
 
 

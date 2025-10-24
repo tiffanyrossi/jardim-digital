@@ -11,3 +11,6 @@ como começar a seguir pessoas no mastodon
 etiqueta no mastodon
 fediverso não é só mastodon
 bamblers via flearows: falar sobre activity pub, self hosting, open source
+
+>[!note] 
+> página em construção - em breve vou plantar uma  [[_o que é isso#🌱semente|🌱semente]] por aqui :)

@@ -1,10 +1,10 @@
 ---
-"title:": 
-"alias:": 
+"title:":
+"alias:":
 "draft:": "false"
-tags: 
-"description:": 
-tipo: planta
+tags:
+  - teoremas
+"description:":
 ---
 os **Teoremas da Incompletude de Gödel**, de [Kurt Gödel](https://pt.wikipedia.org/wiki/Kurt_G%C3%B6del) ([[prova matemática|provados]] por ele em 1931) destruíram a busca por uma *teoria matemática de todas as coisas*. na época, matemáticos tentavam definir um conjunto de axiomas que fosse completo e consistente, mas que também servisse como base para todos os conceitos matemáticos. porém, Gödel provou que quaisquer conjuntos formais que tivessem poder suficiente para expressar a aritmética básica seriam inevitavelmente *incompletos*.
 

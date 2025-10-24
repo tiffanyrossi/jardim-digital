@@ -1,11 +1,10 @@
 ---
 "title:": pesquisa binária
-"alias:": 
+"alias:":
 "draft:": "false"
 tags:
   - algoritmos
-"description:": 
-tipo: planta
+"description:":
 ---
 a **pesquisa binária** é um algoritmo de busca que recebe como entrada uma lista ordenada de elementos. se o item a ser buscado está na lista, o algoritmo retorna sua posição. caso contrário, retorna `null`.
 
